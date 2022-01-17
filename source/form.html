@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Кэт энерджи</title>
+  <!--<link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">-->
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <img class="page-header__logo" src="" alt="Логотип Cat energy" width="33" height="38">
+    <a class="page-header__title" href="index.html"><b>CAT</b> ENERGY</a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="index.html">главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="">каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--active" href="">подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page__main">
+    <h1 class="main-title visually-hidden">Форма регистрации для подбора программы Cat energy</h1>
+    <section class="bio-data">
+      <h2 class="bio-data__title">Подбор программы</h2>
+      <p class="bio-data__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="data-form" action="https://echo.htmlacademy.ru/" method="post">
+        <ul class="data-form__list">
+          <li class="data-form__item">
+            <label class="data-form__label" for="name">Имя:*</label>
+            <input class="data-form__input" type="text" name="name" id="name" placeholder="Барсик">
+          </li>
+          <li class="data-form__item">
+            <label class="data-form__label" for="weight">Вес (КГ):*</label>
+            <input class="data-form__input" type="text" name="weight" id="weight" placeholder="7">
+          </li>
+          <li class="data-form__item">
+            <label class="data-form__label" for="age">Возраст (ЛЕТ):</label>
+            <input class="data-form__input" type="text" name="age" id="age" placeholder="7">
+          </li>
+        </ul>
+        <ul class="data-form__list">
+          <li class="data-form__item">
+            <input class="data-form__radio" type="radio" name="loss" value="loss" checked>
+            <span class="data-form__label">Похудение</span>
+          </li>
+          <li class="data-form__item">
+            <input class="data-form__radio" type="radio" name="gain" value="gain">
+            <span class="data-form__label">Набор массы</span>
+          </li>
+          <li class="data-form__item">
+            <input class="data-form__radio" type="radio" name="unknown" value="unknown">
+            <span class="data-form__label">Не знаю (нужен ваш совет)</span>
+          </li>
+        </ul>
+        <h3 class="data-form__title">Контактные данные (владельца кота)</h3>
+        <ul class="data-form__list">
+          <li class="data-form__item">
+            <label class="data-form__label" for="email">E-mail:*</label>
+            <input class="data-form__input" type="email" name="email" id="email" placeholder="KUKLACHEV@GMAIL.COM">
+          </li>
+          <li class="data-form__item">
+            <label class="data-form__label" for="phone">Телефон:*</label>
+            <input class="data-form__input" type="phone" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+          </li>
+        </ul>
+        <h3 class="data-form__title">Комментарий</h3>
+        <div class="data-form__comments">
+          <input class="data-form__comment-field" type="text" name="comment"
+            placeholder="Расскажите обо всех повадках кота">
+        </div>
+        <ul class="data-form__list">
+          <li class="data-form__item">
+            <input class="data-form__input" type="checkbox" name="sugar" checked>
+            <span class="data-form__label">сахарозаменитель</span>
+          </li>
+          <li class="data-form__item">
+            <input class="data-form__input" type="checkbox" name="sugar">
+            <span class="data-form__label">питьевая вода</span>
+          </li>
+          <li class="data-form__item">
+            <input class="data-form__input" type="checkbox" name="sugar">
+            <span class="data-form__label">молоко</span>
+          </li>
+          <li class="data-form__item">
+            <input class="data-form__input" type="checkbox" name="sugar">
+            <span class="data-form__label">витамины</span>
+          </li>
+        </ul>
+        <button class="data-form__button" type="button">Отправить заявку</button>
+        <p class="data-form__legend">* - Обязательные поля</p>
+      </form>
+    </section>
+  </main>
+  <footer class="page__footer">
+    <section class="footer-contacts">
+      <h2 class="visually hidden">Контакты</h2>
+      <p class="footer-contacts__invitation">приглашаем к сотрудничеству дилеров!</p>
+      <address class="footer-contacts__address">ул. Большая Конюшенная, д. 19/8 <br>
+        Санкт-Петербург </address>
+      <img class="contacts__map" src="" alt="карта проезда">
+    </section>
+    <section class="footer-media">
+      <h2 class="visually hidden">Медиа и социальные сети</h2>
+      <a class="footer-media__cat-logo" href="index.html"><b>CAT</b> ENERGY</a>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link vk-logo" href=""></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link insta-logo" href=""></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link fb-logo" href=""></a>
+        </li>
+      </ul>
+      <a class="footer-media__HTML-academy-logo"
+        href="https://up.htmlacademy.ru/adaptive/24/project/cat-energy#cat-energy-3-8">HTML Academy</a>
+    </section>
+  </footer>
+</body>

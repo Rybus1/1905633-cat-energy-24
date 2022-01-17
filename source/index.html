@@ -10,10 +10,10 @@
 
 <body class="page__body">
   <header class="page-header">
-    <img class="page_header__logo" src="" alt="Логотип Cat energy" width="33px" height="38px">
-    <a class="page-header__title" href=""><b>CAT</b> ENERGY</a>
+    <img class="page-header__logo" src="" alt="Логотип Cat energy" width="33" height="38">
+    <a class="page-header__title" href="index.html"><b>CAT</b> ENERGY</a>
     <nav class="main-nav">
-      <button class="page-header__toggle" type="button">
+      <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="main-nav__list">
@@ -24,35 +24,37 @@
           <a class="main-nav__link" href="">каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="">подбор программы</a>
+          <a class="main-nav__link" href="form.html">подбор программы</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="page__main">
-      <h1 class="main-header visually-hidden">Cat Energy - функциональное питание для котов</h1>
+    <h1 class="main-title visually-hidden">Cat Energy - функциональное питание для котов</h1>
     <section class="product-info">
-      <h2 class="product-info__header section-header">Функциональное питание для котов</h2>
+      <h2 class="product-info__title section-title">Функциональное питание для котов</h2>
       <p class="product-info__slogan">занялся собой? займись котом!</p>
-      <button class="product-info__program-selection" type="button">подобрать программу</button>
+      <a class="product-info__program-selection" href="form.html">подобрать программу</a>
       <ul class="programs">
         <li class="programs__item">
-          <h3 class="programs__header programs__header--slim">Похудение</h3>
-          <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
-            Пора
-            на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <h3 class="programs__title programs__title--slim">Похудение</h3>
+          <p class="programs__description">
+            Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+            Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="programs__link" href="">каталог slim</a>
         </li>
         <li class="programs__item">
-          <h3 class="programs__header programs__header--mass">Набор массы</h3>
-          <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
-            поможет вашему коту нарастить необходимые мышцы!</p>
+          <h3 class="programs__title programs__title--mass">Набор массы</h3>
+          <p class="programs__description">
+            Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
+            поможет вашему коту нарастить необходимые мышцы!
+          </p>
           <a class="programs__link" href="">каталог pro</a>
         </li>
       </ul>
     </section>
     <section class="advantages">
-      <h2 class="advantages__header section-header">Как это работает</h2>
+      <h2 class="advantages__title section-title">Как это работает</h2>
       <ul class="advantages__list">
         <li class="advantages__item">
           <p class="advantages__description advantages__description--bio">Функциональное питание
@@ -75,22 +77,25 @@
         </li>
       </ul>
     </section>
-    <section class="examlpe">
-      <h2 class="example__header section-header">Живой пример</h2>
+    <section class="example">
+      <h2 class="example__title section-title">Живой пример</h2>
       <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
         Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
         часов в день. </p>
-      <fieldset class="stats">
-        <legend class="stats__description">снижение веса</legend>
-        <p class="stats__value">5 КГ</p>
-      </fieldset>
-      <fieldset class="stats">
-        <legend class="stats__description">затрачено времени</legend>
-        <p class="stats__value">60 ДНЕЙ</p>
-      </fieldset>
+      <div class="example__stats-wrapper">
+        <div class="example__weight-wrapper">
+          <legend class="example__description">снижение веса</legend>
+          <p class="example__value">5 КГ</p>
+        </div>
+        <div class="example__time-wrapper">
+          <legend class="example__description">затрачено времени</legend>
+          <p class="example__value">60 ДНЕЙ</p>
+        </div>
+      </div>
       <p class="example__finance">Затраты на питание: 15 000 РУБ.</p>
       <div class="example__slider">
-        <img class="slider__cat-image" src="" alt="Фото кота">
+        <img class="slider__cat-image--fat" src="" alt="Фото кота до">
+        <img class="slider__cat-image--slim" src="" alt="Фото кота после">
         <span class="slider__text">Было</span>
         <button class="slider__button" type="button"></button>
         <span class="slider__text">Стало</span>
@@ -107,7 +112,7 @@
     </section>
     <section class="footer-media">
       <h2 class="visually hidden">Медиа и социальные сети</h2>
-      <a class="footer-media__cat-logo" href=""><b>CAT</b> ENERGY</a>
+      <a class="footer-media__cat-logo" href="index.html"><b>CAT</b> ENERGY</a>
       <ul class="social">
         <li class="social__item">
           <a class="social__link vk-logo" href=""></a>
@@ -119,7 +124,8 @@
           <a class="social__link fb-logo" href=""></a>
         </li>
       </ul>
-      <a class="footer-media__HTML-academy-logo" href="">HTML Academy</a>
+      <a class="footer-media__HTML-academy-logo"
+        href="https://up.htmlacademy.ru/adaptive/24/project/cat-energy#cat-energy-3-8">HTML Academy</a>
     </section>
   </footer>
 </body>
