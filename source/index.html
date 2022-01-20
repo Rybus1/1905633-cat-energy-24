@@ -4,15 +4,17 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт энерджи</title>
-  <!--<link rel="stylesheet" href="styles/styles.css">
-  <link rel="icon" href="favicon.ico">-->
+  <link rel="stylesheet" href="css/style.css">
+  <!--<link rel="icon" href="favicon.ico">-->
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <img class="page-header__logo" src="" alt="Логотип Cat energy" width="33" height="38">
-    <a class="page-header__title" href="index.html"><b>CAT</b> ENERGY</a>
-    <nav class="main-nav">
+    <a href="index.html">
+    <img class="page-header__logo" src="/img/logo-mobile.svg" alt="Логотип Веселый кот" width="33" height="38">
+    </a>
+    <img class="page-header__title" src="/img/header-title.svg" alt="Заглавие Cat Energy" width="101" height="18">
+    <nav class="main-nav visually-hidden"> <!--Временно скрыл поп-ап меню-->
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -21,7 +23,7 @@
           <a class="main-nav__link main-nav__link--active" href="">главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="">каталог продукции</a>
+          <a class="main-nav__link" href="catalog.html">каталог продукции</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="form.html">подбор программы</a>
@@ -32,9 +34,11 @@
   <main class="page__main">
     <h1 class="main-title visually-hidden">Cat Energy - функциональное питание для котов</h1>
     <section class="product-info">
-      <h2 class="product-info__title section-title">Функциональное питание для котов</h2>
-      <p class="product-info__slogan">занялся собой? займись котом!</p>
-      <a class="product-info__program-selection" href="form.html">подобрать программу</a>
+      <div class="product-info__content">
+        <h2 class="product-info__title section-title">Функциональное питание для котов</h2>
+        <p class="product-info__slogan">занялся собой? займись котом!</p>
+        <a class="product-info__program-selection" href="form.html">подобрать программу</a>
+      </div>
       <ul class="programs">
         <li class="programs__item">
           <h3 class="programs__title programs__title--slim">Похудение</h3>
