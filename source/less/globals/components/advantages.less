@@ -1,0 +1,88 @@
+// Начните писать стили здесь
+.advantages {
+  position: relative;
+}
+
+.advantages__title {
+  font-size: 36px;
+  line-height: 40px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.advantages__item {
+  position: relative;
+
+  &:last-of-type {
+    margin-bottom: 53px;
+  }
+}
+
+.advantages__description {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 100px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @green;
+  }
+
+  &--bio::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 38px;
+    top: 16px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/leaf-icon.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--powder::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 35px;
+    top: 16px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/powder-icon.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--meal::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 39px;
+    top: 16px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/cuttlery-icon.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--time::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 38px;
+    top: 16px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/clock-icon.svg");
+    background-repeat: no-repeat;
+  }
+}

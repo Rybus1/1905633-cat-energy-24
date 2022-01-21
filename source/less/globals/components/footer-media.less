@@ -1,0 +1,107 @@
+// Начните писать стили здесь
+.footer-media {
+  background-color: @grey;
+  position: relative;
+}
+
+.footer-media__logo::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 95px;
+    width: 280px;
+    height: 1px;
+    background-color: @dark-grey;
+}
+
+.footer-media__logo-title {
+  display: block;
+  padding-top: 39px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+.social {
+  display: flex;
+  position: relative;
+  margin-left: 93px;
+  margin-right: 102px;
+  justify-content: space-between;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -73px;
+    top: 63px;
+    width: 280px;
+    height: 2px;
+    background-color: @dark-grey;
+  }
+}
+
+.social__item {
+  display: flex;
+  height: 64px;
+}
+
+.vk-logo {
+  display: block;
+  background-image: url("/img/vk-logo.svg");
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 14px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-position: center;
+}
+
+.insta-logo {
+  display: block;
+  background-image: url("/img/insta-logo.svg");
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-position: center;
+}
+
+.fb-logo {
+  display: block;
+  background-image: url("/img/fb-logo.svg");
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 19px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-position: center;
+}
+
+.footer-media__HTML-academy-wrapper {
+  position: relative;
+  margin-top: 28px;
+  margin-bottom: 32px;
+}
+
+.footer-media__HTML-academy-logo {
+  text-decoration: none;
+  color: @special_dark-grey;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 19px;
+
+  &::after {
+    content: "";
+    display: block;
+    background-image: url("/img/html-academy-logo.svg");
+    width: 27px;
+    height: 34px;
+    position: absolute;
+    right: 20px;
+    top: -5px;
+  }
+}

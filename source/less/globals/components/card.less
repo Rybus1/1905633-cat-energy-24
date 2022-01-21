@@ -1,0 +1,65 @@
+// Начните писать стили здесь
+.card {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  margin-top: 19px;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: @shop-grey;
+    top: 190px;
+    left: -20px;
+  }
+}
+
+.card__photo {
+  display: block;
+}
+
+.card__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: @special_dark-grey;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: @special_dark-grey-2;
+}
+
+.card__product {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  color: @special_dark-grey;
+}
+
+.card__category {
+  margin: 0;
+}
+
+.card__measure {
+  margin: 0;
+  text-align: end;
+}
+
+.card__order {
+  margin-bottom: 25px;
+}

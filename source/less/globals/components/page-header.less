@@ -5,6 +5,17 @@
   height: auto;
   margin-left: 20px;
   margin-right: 20px;
+  flex-wrap: wrap;
+
+  &__white-background::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: @dark-grey;
+    top: 66px;
+    left: 0px;
+  }
 }
 
 .page-header__logo {

@@ -1,0 +1,91 @@
+// Начните писать стили здесь
+.page {
+  width: 320px;
+  height: auto;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page__body {
+  position: relative;
+}
+
+.page__catalog-title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  padding-left: 20px;
+  padding-top: 27px;
+  padding-bottom: 41px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: @shop-grey;
+    top: 170px;
+    left: 0px;
+  }
+}
+
+.page__promo-wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 280px;
+    height: 290px;
+    background-image: url("/img/catalog-background1.jpg");
+    background-size: 279px 289px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20px;
+    top: 0;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 280px;
+    height: 290px;
+    background-color: rgba(@green, 0.85);
+  }
+}
+
+.page__promo {
+  display: block;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: @white;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 59px;
+  padding-bottom: 43px;
+  z-index: 1;
+  position: relative;
+  width: 161px;
+  margin-bottom: 35px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 78px;
+    height: 80px;
+    background-image: url("/img/icon_gift.svg");
+    background-repeat: no-repeat;
+    margin-bottom: 48px;
+  }
+}
