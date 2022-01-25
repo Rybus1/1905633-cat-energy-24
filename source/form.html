@@ -9,10 +9,13 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
-    <img class="page-header__logo" src="" alt="Логотип Cat energy" width="33" height="38">
-    <a class="page-header__title" href="index.html"><b>CAT</b> ENERGY</a>
-    <nav class="main-nav">
+  <header class="page-header page-header__white-background">
+    <a href="index.html">
+      <img class="page-header__logo" src="/img/logo-mobile.svg" alt="Логотип Веселый кот" width="33" height="38">
+    </a>
+    <img class="page-header__title" src="/img/header-title.svg" alt="Заглавие Cat Energy" width="101" height="18">
+    <nav class="main-nav visually-hidden">
+      <!--Временно скрыл поп-ап меню-->
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -21,10 +24,10 @@
           <a class="main-nav__link" href="index.html">главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">каталог продукции</a>
+          <a class="main-nav__link main-nav__link--active" href="">каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active" href="">подбор программы</a>
+          <a class="main-nav__link" href="form.html">подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -35,7 +38,7 @@
       <h2 class="bio-data__title">Подбор программы</h2>
       <p class="bio-data__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="data-form" action="https://echo.htmlacademy.ru/" method="post">
-        <ul class="data-form__list">
+        <ul class="data-form__list underline-list">
           <li class="data-form__item">
             <label class="data-form__label" for="name">Имя:*</label>
             <input class="data-form__input" type="text" name="name" id="name" placeholder="Барсик">
@@ -49,71 +52,81 @@
             <input class="data-form__input" type="text" name="age" id="age" placeholder="7">
           </li>
         </ul>
-        <ul class="data-form__list">
+        <ul class="data-form__list2 underline-list">
           <li class="data-form__item">
             <input class="data-form__radio" type="radio" name="weight-change" value="loss" checked>
-            <span class="data-form__label">Похудение</span>
+            <span class="data-form__program-label">Похудение</span>
           </li>
           <li class="data-form__item">
             <input class="data-form__radio" type="radio" name="weight-change" value="gain">
-            <span class="data-form__label">Набор массы</span>
+            <span class="data-form__program-label">Набор массы</span>
           </li>
           <li class="data-form__item">
             <input class="data-form__radio" type="radio" name="weight-change" value="unknown">
-            <span class="data-form__label">Не знаю (нужен ваш совет)</span>
+            <span class="data-form__program-label">Не знаю (нужен ваш совет)</span>
           </li>
         </ul>
-        <h3 class="data-form__title">Контактные данные (владельца кота)</h3>
-        <ul class="data-form__list">
-          <li class="data-form__item">
-            <label class="data-form__label" for="email">E-mail:*</label>
-            <input class="data-form__input" type="email" name="email" id="email" placeholder="KUKLACHEV@GMAIL.COM">
-          </li>
-          <li class="data-form__item">
-            <label class="data-form__label" for="phone">Телефон:*</label>
-            <input class="data-form__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
-          </li>
-        </ul>
-        <h3 class="data-form__title">Комментарий</h3>
-        <div class="data-form__comments">
-          <input class="data-form__comment-field" type="text" name="comment"
-            placeholder="Расскажите обо всех повадках кота">
+        <div class="data-form__contacts-wrapper">
+          <h3 class="data-form__title">Контактные данные<br> (владельца кота)</h3>
+          <ul class="data-form__list">
+            <li class="data-form__item">
+              <label class="data-form__label" for="email">E-mail:*</label>
+              <input class="data-form__input contacts-input" type="email" name="email" id="email"
+                placeholder="KUKLACHEV@GMAIL.COM">
+            </li>
+            <li class="data-form__item">
+              <label class="data-form__label" for="phone">Телефон:*</label>
+              <input class="data-form__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+            </li>
+          </ul>
         </div>
-        <h3 class="data-form__title">Дополнительно</h3>
-        <ul class="data-form__list">
-          <li class="data-form__item">
-            <input class="data-form__input" type="checkbox" name="sugar" checked>
-            <span class="data-form__label">сахарозаменитель</span>
-          </li>
-          <li class="data-form__item">
-            <input class="data-form__input" type="checkbox" name="sugar">
-            <span class="data-form__label">питьевая вода</span>
-          </li>
-          <li class="data-form__item">
-            <input class="data-form__input" type="checkbox" name="sugar">
-            <span class="data-form__label">молоко</span>
-          </li>
-          <li class="data-form__item">
-            <input class="data-form__input" type="checkbox" name="sugar">
-            <span class="data-form__label">витамины</span>
-          </li>
-        </ul>
-        <button class="data-form__button button" type="button">Отправить заявку</button>
-        <p class="data-form__legend">* - Обязательные поля</p>
+        <div class="data-form__comments-wrapper">
+          <h3 class="data-form__title">Комментарий</h3>
+          <div class="data-form__comments">
+            <textarea class="data-form__comment-field" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+        </div>
+        <div class="data-form__extra-wrapper">
+          <h3 class="data-form__title">Дополнительно</h3>
+          <ul class="data-form__list">
+            <li class="data-form__item">
+              <input class="data-form__checkbox-input" type="checkbox" name="sugar" checked>
+              <span class="data-form__checkbox-label">сахарозаменитель</span>
+            </li>
+            <li class="data-form__item">
+              <input class="data-form__checkbox-input" type="checkbox" name="sugar">
+              <span class="data-form__checkbox-label">питьевая вода</span>
+            </li>
+            <li class="data-form__item">
+              <input class="data-form__checkbox-input" type="checkbox" name="sugar">
+              <span class="data-form__checkbox-label">молоко</span>
+            </li>
+            <li class="data-form__item">
+              <input class="data-form__checkbox-input" type="checkbox" name="sugar">
+              <span class="data-form__checkbox-label">витамины</span>
+            </li>
+          </ul>
+          <button class="data-form__button button" type="button">Отправить заявку</button>
+          <p class="data-form__legend">* - Обязательные поля</p>
+        </div>
       </form>
     </section>
   </main>
   <footer class="page__footer">
-    <section class="footer-contacts">
-      <h2 class="visually hidden">Контакты</h2>
+    <section class="footer-contacts footer-contacts--white-background">
+      <h2 class="visually-hidden">Контакты</h2>
       <p class="footer-contacts__invitation">приглашаем к сотрудничеству дилеров!</p>
       <address class="footer-contacts__address">ул. Большая Конюшенная, д. 19/8 <br>
         Санкт-Петербург </address>
-      <img class="contacts__map" src="" alt="карта проезда">
+      <img class="contacts__map" src="/img/map.jpg" alt="карта проезда">
+      <!--Временно подставил просто картинку-->
     </section>
     <section class="footer-media">
-      <h2 class="visually hidden">Медиа и социальные сети</h2>
-      <a class="footer-media__cat-logo" href="index.html"><b>CAT</b> ENERGY</a>
+      <h2 class="visually-hidden">Медиа и социальные сети</h2>
+      <a class="footer-media__logo" href="index.html">
+        <img class="footer-media__logo-title" src="/img/header-title.svg" alt="Баннер Cat Energy" width="128"
+          height="24">
+      </a>
       <ul class="social">
         <li class="social__item">
           <a class="social__link vk-logo" href=""></a>
@@ -125,8 +138,10 @@
           <a class="social__link fb-logo" href=""></a>
         </li>
       </ul>
-      <a class="footer-media__HTML-academy-logo"
-        href="https://up.htmlacademy.ru/adaptive/24/project/cat-energy#cat-energy-3-8">HTML Academy</a>
+      <div class="footer-media__HTML-academy-wrapper">
+        <a class="footer-media__HTML-academy-logo"
+          href="https://up.htmlacademy.ru/adaptive/24/project/cat-energy#cat-energy-3-8">HTML Academy</a>
+      </div>
     </section>
   </footer>
 </body>
