@@ -1,11 +1,9 @@
 // Начните писать стили здесь
 .page-header {
   display: flex;
-  width: 320px;
   height: auto;
-  margin-left: 20px;
-  margin-right: 20px;
   flex-wrap: wrap;
+  z-index: 2;
 
   &__white-background::after {
     content: "";
@@ -14,17 +12,87 @@
     height: 1px;
     background-color: @dark-grey;
     top: 66px;
-    left: 0px;
+    left: 0;
+
+    @media (min-width: @tablet) {
+      content: none;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    flex-wrap: wrap;
+  }
+}
+
+.page-header__wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  @media (min-width: @tablet) {
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 
 .page-header__logo {
   margin-top: 12px;
   margin-bottom: 17px;
+
+  @media (min-width: @tablet) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
 
-.page-header__title {
+.page-header__title-link {
+  display: block;
   margin-left: auto;
   margin-right: auto;
   align-self: center;
+  width: 101px;
+  height: 18px;
+  background-image: url("/img/header-title.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 23px;
+  padding-bottom: 24px;
+
+  @media (min-width: @tablet) {
+    background-image: url("/img/logo-tablet.svg");
+    width: 174px;
+    height: 52px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.page-header__toggle {
+  height: 20px;
+  width: 24px;
+  align-self: center;
+  background-color: transparent;
+  border: transparent;
+  background-image: url("/img/toggle-mobile.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }

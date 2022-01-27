@@ -1,4 +1,98 @@
 // Начните писать стили здесь
 .main-nav {
   position: absolute;
+  left: -1px;
+  top: 52px;
+  z-index: 3;
+
+  @media (min-width: @tablet) {
+    position: static;
+    margin-left: auto;
+  }
+}
+
+.page-header__white-background .main-nav {
+  top: 52px;
+}
+
+.main-nav__list {
+  display: block;
+  width: 321px;
+  text-align: center;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    margin: 0px;
+    width: 100%;
+  }
+}
+
+.main-nav__item {
+  background-color: @white;
+  position: relative;
+
+  @media (min-width: @tablet) {
+    height: 24px;
+    margin-right: 34px;
+
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+}
+
+.main-nav__link {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: @black;
+  text-transform: uppercase;
+  display: block;
+  height: 44px;
+  padding-top: 22px;
+  position: relative;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-top: 42px;
+    height: 34px;
+
+    &--active {
+      border-bottom: 2px solid green;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: @dark-grey;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    @media (min-width: @tablet) {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    background-color: @dark-grey;
+    top: 66px;
+    left: 0;
+    z-index: 1;
+
+    @media (min-width: @tablet) {
+      content: none;
+    }
+  }
 }

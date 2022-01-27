@@ -1,6 +1,5 @@
 // Начните писать стили здесь
 .page {
-  width: 320px;
   height: auto;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -9,7 +8,31 @@
 }
 
 .page__body {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
+  background-color: @contrast;
+
+  @media (min-width: @tablet) {
+    min-width: 768px;
+  }
+}
+
+.page__body-outer-wrapper {
+  position: relative;
+  display: block;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: @white;
+
+  @media (min-width: @tablet) {
+    min-width: @tablet;
+    max-width: @tablet;
+  }
 }
 
 .page__catalog-title {
@@ -27,7 +50,7 @@
     height: 1px;
     background-color: @shop-grey;
     top: 170px;
-    left: 0px;
+    left: 0;
   }
 }
 
@@ -87,5 +110,13 @@
     background-image: url("/img/icon_gift.svg");
     background-repeat: no-repeat;
     margin-bottom: 48px;
+  }
+}
+
+.page__footer {
+  max-width: 320px;
+
+  @media (min-width: @tablet) {
+    max-width: @tablet;
   }
 }
