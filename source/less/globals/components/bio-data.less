@@ -1,8 +1,4 @@
 // Начните писать стили здесь
-.bio-data {
-  margin-left: 20px;
-  margin-right: 20px;
-}
 
 .bio-data__title {
   font-size: 36px;
@@ -10,6 +6,12 @@
   font-weight: 400;
   margin-top: 27px;
   margin-bottom: 37px;
+
+  @media (min-width: @tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+  }
 }
 
 .bio-data__description {
@@ -20,4 +22,11 @@
   text-transform: uppercase;
   width: 226px;
   margin-bottom: 39px;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    width: 323px;
+  }
 }

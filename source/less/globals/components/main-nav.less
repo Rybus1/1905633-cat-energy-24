@@ -1,13 +1,52 @@
 // Начните писать стили здесь
 .main-nav {
   position: absolute;
-  left: -1px;
+  left: 0px;
   top: 52px;
   z-index: 3;
+
+  @media (max-width: @mobile-only) {
+    width: 320px;
+      &--closed {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet) {
     position: static;
     margin-left: auto;
+  }
+}
+
+.main-nav-inline {
+  position: static;
+}
+
+.main-nav-index {
+  @media (min-width: @laptop) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 696px;
+      top: 0px;
+      right: 0px;
+      background-image: url("../img/index-background-desktop1.jpg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: @laptop) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 720px;
+      height: 696px;
+      top: 0px;
+      right: 0px;
+      background-color: rgba(@green, 0.85);
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -17,13 +56,17 @@
 
 .main-nav__list {
   display: block;
-  width: 321px;
   text-align: center;
 
   @media (min-width: @tablet) {
     display: flex;
     margin: 0px;
     width: 100%;
+  }
+
+  @media (min-width: @laptop) {
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -34,6 +77,16 @@
   @media (min-width: @tablet) {
     height: 24px;
     margin-right: 34px;
+
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+
+  @media (min-width: @laptop) {
+    background-color: transparent;
+    height: 30px;
+    margin-right: 36px;
 
     &:last-of-type {
       margin-right: 0px;
@@ -62,8 +115,17 @@
     height: 34px;
 
     &--active {
-      border-bottom: 2px solid green;
+      border-bottom: 2px solid @green;
     }
+  }
+
+  @media (min-width: @laptop) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-top: 71px;
+    height: 34px;
+    padding-top: 0px;
   }
 
   &::before {
@@ -93,6 +155,26 @@
 
     @media (min-width: @tablet) {
       content: none;
+    }
+  }
+}
+
+.main-nav-inline .main-nav__link {
+  &::before {
+    left: -20px;
+  }
+
+  &::after {
+    left: -20px;
+  }
+}
+
+.main-nav-index .main-nav__link {
+  @media (min-width: @laptop) {
+    color: @white;
+
+    &--active {
+      border-bottom: 2px solid @white;
     }
   }
 }

@@ -14,8 +14,24 @@
       width: @tablet;
       height: 619px;
       background-color: @white;
-      left: 0px;
-      top: 0px;
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: @laptop) {
+    max-width: @laptop;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: @laptop;
+      height: 205px;
+      background-color: @white;
+      left: 0;
+      top: 0;
       z-index: 1;
     }
   }
@@ -31,6 +47,12 @@
     position: relative;
     z-index: 2;
   }
+
+  @media (min-width: @laptop) {
+    margin-left: 110px;
+    margin-right: 110px;
+    display: flex;
+  }
 }
 
 .example__title {
@@ -44,6 +66,10 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 63px;
+  }
+
+  @media (min-width: @laptop) {
+    margin-bottom: 146px;
   }
 }
 
@@ -60,11 +86,20 @@
     margin-bottom: 54px;
     width: 700px;
   }
+
+  @media (min-width: @laptop) {
+    margin-bottom: 69px;
+    width: 436px;
+  }
 }
 
 .example__results-wrapper {
   @media (min-width: @tablet) {
     display: flex;
+  }
+
+  @media (min-width: @laptop) {
+    display: inline;
   }
 }
 
@@ -137,6 +172,27 @@
     padding-left: 8px;
     padding-right: 9px;
   }
+
+  @media (min-width: @laptop) {
+    background-color: @background-grey;
+    top: 64px;
+    left: 24px;
+    max-width: 145px;
+    padding-left: 8px;
+    padding-right: 9px;
+  }
+}
+
+.example__finance-wrapper {
+  @media (max-width: @mobile-only) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: @laptop) {
+    display: flex;
+    margin-top: 69px;
+  }
 }
 
 .example__finance {
@@ -154,6 +210,14 @@
     width: 175px;
     text-align: end;
   }
+
+  @media (min-width: @laptop) {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: start;
+    margin-left: 0px;
+    width: 237px;
+  }
 }
 
 .example__slider {
@@ -166,9 +230,19 @@
     margin-top: 72px;
     margin-left: 59px;
   }
+
+  @media (min-width: @laptop) {
+    display: flex;
+    margin-top: 0;
+    margin-left: 60px;
+  }
 }
 
 .slider__cat-image-fat {
+  display: block;
+  background-image: url("/img/before-mobile1.png");
+  width: 280px;
+  height: 232px;
 
   @media (min-width: @tablet) {
     background-image: url("/img/cat-fat-tablet.png");
