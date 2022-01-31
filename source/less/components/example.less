@@ -1,17 +1,13 @@
-// Начните писать стили здесь
 .example {
   background-color: @background-grey;
-  max-width: 320px;
   position: relative;
 
   @media (min-width: @tablet) {
-    max-width: @tablet;
-
     &::after {
       content: "";
       position: absolute;
       display: block;
-      width: @tablet;
+      width: 100%;
       height: 619px;
       background-color: @white;
       left: 0;
@@ -21,13 +17,11 @@
   }
 
   @media (min-width: @laptop) {
-    max-width: @laptop;
-
     &::after {
       content: "";
       position: absolute;
       display: block;
-      width: @laptop;
+      width: 100%;
       height: 205px;
       background-color: @white;
       left: 0;
@@ -74,7 +68,7 @@
 }
 
 .example__description {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 20px;
@@ -84,7 +78,7 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 54px;
-    width: 700px;
+    width: 99%;
   }
 
   @media (min-width: @laptop) {
@@ -96,6 +90,7 @@
 .example__results-wrapper {
   @media (min-width: @tablet) {
     display: flex;
+    justify-content: space-between;
   }
 
   @media (min-width: @laptop) {
@@ -105,6 +100,7 @@
 
 .example__stats-wrapper {
   display: flex;
+  gap: 0 32px;
   justify-content: space-between;
 
   @media (min-width: @tablet) {
@@ -114,14 +110,25 @@
 
 .example__weight-wrapper {
   position: relative;
+  width: 100%;
 
   @media (min-width: @tablet) {
     margin-right: 42px;
+  }
+
+  @media (min-width: @laptop) {
+    margin-right: 0;
+    width: 162px;
   }
 }
 
 .example__time-wrapper {
   position: relative;
+  width: 100%;
+
+  @media (min-width: @laptop) {
+    width: 162px;
+  }
 }
 
 .example__value {
@@ -134,30 +141,36 @@
   text-align: center;
   padding-top: 14px;
   padding-bottom: 17px;
-  width: 124px;
+  width: 100%;
   margin-bottom: 34px;
   border-radius: 3px;
 
   @media (min-width: @tablet) {
-    margin: 0px;
+    margin: 0;
     width: 162px;
     font-size: 30px;
     line-height: 37px;
     padding-top: 15px;
     padding-bottom: 18px;
   }
+
+  @media (min-width: @laptop) {
+    margin-right: 0;
+  }
 }
 
 .example__label {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
   font-weight: 400;
   text-align: center;
-  position: absolute;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
-  left: 16px;
-  top: 72px;
+  width: 70%;
+  top: -42px;
   background-color: @background-grey;
   background-size: 320px auto;
   background-position: -20px;
@@ -166,17 +179,17 @@
 
   @media (min-width: @tablet) {
     background-color: @white;
-    top: 64px;
-    left: 24px;
+    top: -8px;
     max-width: 145px;
     padding-left: 8px;
     padding-right: 9px;
+    font-size: 14px;
+    line-height: 14px;
   }
 
   @media (min-width: @laptop) {
     background-color: @background-grey;
-    top: 64px;
-    left: 24px;
+    top: -8px;
     max-width: 145px;
     padding-left: 8px;
     padding-right: 9px;
@@ -191,7 +204,7 @@
 
   @media (min-width: @laptop) {
     display: flex;
-    margin-top: 69px;
+    margin-top: 35px;
   }
 }
 
@@ -200,7 +213,7 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 40px;
 
   @media (min-width: @tablet) {
@@ -209,145 +222,21 @@
     line-height: 30px;
     width: 175px;
     text-align: end;
+    margin-bottom: 0;
   }
 
   @media (min-width: @laptop) {
     font-size: 20px;
     line-height: 30px;
     text-align: start;
-    margin-left: 0px;
+    margin-left: 0;
     width: 237px;
   }
 }
 
 .example__slider {
   padding-bottom: 40px;
-}
-
-.slider__cat-image-wrapper {
-  @media (min-width: @tablet) {
-    display: flex;
-    margin-top: 72px;
-    margin-left: 59px;
-  }
-
-  @media (min-width: @laptop) {
-    display: flex;
-    margin-top: 0;
-    margin-left: 60px;
-  }
-}
-
-.slider__cat-image-fat {
-  display: block;
-  background-image: url("/img/before-mobile1.png");
-  width: 280px;
-  height: 232px;
-
-  @media (min-width: @tablet) {
-    background-image: url("/img/cat-fat-tablet.png");
-    width: 296px;
-    height: 511px;
-  }
-}
-
-.slider__cat-image-slim {
-
-  @media (min-width: @tablet) {
-    background-image: url("/img/cat-slim-tablet.png");
-    width: 296px;
-    height: 511px;
-  }
-}
-
-.slider__wrapper {
-  display: flex;
-  margin-left: 35px;
-  margin-right: 35px;
-
-  @media (min-width: @tablet) {
-    margin-left: 70px;
-    margin-right: 70px;
-  }
-}
-
-.slider__text {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  display: block;
-  text-align: center;
-  width: 49px;
-  height: 30px;
-  padding-top: 9px;
-
-  @media (min-width: @tablet) {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-.slider__button {
-  margin-left: 13px;
-  margin-right: 13px;
-  width: 85px;
-  height: 14px;
-  align-self: center;
-  border: 1px solid @border-grey;
-  border-radius: 6px;
-  position: relative;
-
-  @media (min-width: @tablet) {
-    margin-left: 23px;
-    margin-right: 23px;
-    width: 426px;
-    height: 6px;
-    background-color: @slider-grey;
-    border: none;
-    margin-top: 10px;
-  }
-
-  &::before {
-    @media (min-width: @tablet) {
-      content: "";
-      position: absolute;
-      width: 34px;
-      height: 34px;
-      background-color: @white;
-      top: -14px;
-      left: 196px;
-      border-radius: 50%;
-    }
-
-    @media (max-width: @mobile-only) {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      border: 0;
-      padding: 0;
-      white-space: nowrap;
-      clip-path: inset(100%);
-      clip: rect(0 0 0 0);
-      overflow: hidden;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 36px;
-    height: 6px;
-    background-color: @green;
-    top: 3px;
-    left: 6px;
-    border-radius: 6px;
-
-    @media (min-width: @tablet) {
-      width: 8px;
-      height: 8px;
-      left: 209px;
-      top: -1px;
-    }
-  }
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }

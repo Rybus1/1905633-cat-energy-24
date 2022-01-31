@@ -1,13 +1,14 @@
 // Начните писать стили здесь
 .main-nav {
   position: absolute;
-  left: 0px;
+  left: 0;
   top: 52px;
   z-index: 3;
 
   @media (max-width: @mobile-only) {
-    width: 320px;
-      &--closed {
+    width: 100%;
+
+    &--closed {
       display: none;
     }
   }
@@ -27,12 +28,14 @@
     &::before {
       content: "";
       position: absolute;
-      width: 720px;
+      width: 50%;
       height: 696px;
-      top: 0px;
-      right: 0px;
+      top: 0;
+      right: 0;
       background-image: url("../img/index-background-desktop1.jpg");
+      background-color: @cat-bg;
       background-repeat: no-repeat;
+      background-position-x: right;
     }
   }
 
@@ -40,18 +43,14 @@
     &::after {
       content: "";
       position: absolute;
-      width: 720px;
+      width: 50%;
       height: 696px;
-      top: 0px;
-      right: 0px;
+      top: 0;
+      right: 0;
       background-color: rgba(@green, 0.85);
       background-repeat: no-repeat;
     }
   }
-}
-
-.page-header__white-background .main-nav {
-  top: 52px;
 }
 
 .main-nav__list {
@@ -60,7 +59,7 @@
 
   @media (min-width: @tablet) {
     display: flex;
-    margin: 0px;
+    margin: 0;
     width: 100%;
   }
 
@@ -79,7 +78,7 @@
     margin-right: 34px;
 
     &:last-of-type {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 
@@ -89,7 +88,7 @@
     margin-right: 36px;
 
     &:last-of-type {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 }
@@ -117,6 +116,14 @@
     &--active {
       border-bottom: 2px solid @green;
     }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: @laptop) {
@@ -125,13 +132,13 @@
     font-weight: 400;
     margin-top: 71px;
     height: 34px;
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   &::before {
     content: "";
     position: absolute;
-    width: 320px;
+    width: 100%;
     height: 1px;
     background-color: @dark-grey;
     top: 0;

@@ -72,6 +72,14 @@
     height: 52px;
     margin-left: 0;
     margin-right: 0;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 
   @media (min-width: @laptop) {
@@ -112,4 +120,8 @@
 
 .page-header__toggle--cross {
   background-image: url("/img/toggle-mobile-cross.svg");
+}
+
+.page-header__white-background .main-nav {
+  top: 52px;
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <!--<link rel="icon" href="favicon.ico">-->
 </head>
@@ -44,11 +44,11 @@
               <ul class="data-form__list underline-list">
                 <li class="data-form__item">
                   <label class="data-form__label" for="name">Имя:*</label>
-                  <input class="data-form__input" type="text" name="name" id="name" placeholder="Барсик">
+                  <input class="data-form__input" type="text" name="name" id="name" placeholder="Барсик" required>
                 </li>
                 <li class="data-form__item">
                   <label class="data-form__label" for="weight">Вес (КГ):*</label>
-                  <input class="data-form__input" type="text" name="weight" id="weight" placeholder="7">
+                  <input class="data-form__input" type="text" name="weight" id="weight" placeholder="7" required>
                 </li>
                 <li class="data-form__item">
                   <label class="data-form__label" for="age">Возраст (ЛЕТ):</label>
@@ -70,28 +70,28 @@
                 </li>
               </ul>
             </div>
-            <div class="data-form__contacts-wrapper">
+            <div class="data-form__contacts-wrapper block-wrapper">
               <h3 class="data-form__title">Контактные данные (владельца кота)</h3>
               <ul class="data-form__list">
                 <li class="data-form__item">
                   <label class="data-form__label" for="email">E-mail:*</label>
                   <input class="data-form__input contacts-input" type="email" name="email" id="email"
-                    placeholder="KUKLACHEV@GMAIL.COM">
+                    placeholder="KUKLACHEV@GMAIL.COM" required>
                 </li>
                 <li class="data-form__item">
                   <label class="data-form__label" for="phone">Телефон:*</label>
-                  <input class="data-form__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+                  <input class="data-form__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required pattern="^[0-9]{1} \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}">
                 </li>
               </ul>
             </div>
-            <div class="data-form__comments-wrapper">
+            <div class="data-form__comments-wrapper block-wrapper">
               <h3 class="data-form__title">Комментарий</h3>
               <div class="data-form__comments">
                 <textarea class="data-form__comment-field" name="comment"
                   placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
             </div>
-            <div class="data-form__extra-wrapper">
+            <div class="data-form__extra-wrapper block-wrapper">
               <h3 class="data-form__title">Дополнительно</h3>
               <ul class="data-form__list">
                 <li class="data-form__item">
@@ -133,7 +133,7 @@
         </div>
         <iframe class="footer-contacts__map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6044350650561!2d30.32194232853899!3d59.938705733169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1643231784919!5m2!1sru!2sua"
-          style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+          allowfullscreen="" loading="lazy"></iframe>
       </section>
       <section class="footer-media">
         <div class="footer-media-wrapper">

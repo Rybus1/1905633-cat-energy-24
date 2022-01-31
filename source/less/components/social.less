@@ -1,0 +1,105 @@
+.social {
+  display: flex;
+  position: relative;
+  margin-left: 73px;
+  margin-right: 82px;
+  justify-content: space-between;
+
+  @media (min-width: @tablet) {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 122px;
+  }
+}
+
+.social__item {
+  display: flex;
+  height: 64px;
+}
+
+.vk-logo {
+  display: block;
+  background-image: url("/img/icons/vk-logo.svg");
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 14px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-position: center;
+
+  @media (min-width: @tablet) {
+    width: 29px;
+    height: 17px;
+    background-size: 29px, 17px;
+  }
+}
+
+.insta-logo {
+  display: block;
+  background-image: url("/img/icons/insta-logo.svg");
+  // background-image: url("/img/icons/sprite.svg#insta-logo");
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-position: center;
+
+  @media (min-width: @tablet) {
+    width: 23px;
+    height: 23px;
+    background-size: 23px, 23px;
+  }
+}
+
+.fb-logo {
+  display: block;
+  background-image: url("/img/icons/fb-logo.svg");
+  background-repeat: no-repeat;
+  width: 11px;
+  height: 19px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-position: center;
+
+  @media (min-width: @tablet) {
+    width: 15px;
+    height: 29px;
+    background-size: 15px, 29px;
+  }
+}
+
+.footer-media__HTML-academy-wrapper {
+  position: relative;
+  margin-top: 28px;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet) {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 50px;
+  }
+}
+
+.footer-media__HTML-academy-logo {
+  text-decoration: none;
+  color: @special_dark-grey;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+
+  &::after {
+    content: "";
+    display: block;
+    background-image: url("/img/icons/html-academy-logo.svg");
+    width: 27px;
+    height: 34px;
+    position: absolute;
+    right: 0;
+    top: -5px;
+
+    @media (min-width: @tablet) {
+      right: -49px;
+    }
+  }
+}

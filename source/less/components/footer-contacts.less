@@ -1,5 +1,6 @@
-// Начните писать стили здесь
 .footer-contacts {
+  position: relative;
+
   &--white-background {
     background-color: @grey;
   }
@@ -25,7 +26,8 @@
     width: 565px;
     height: 198px;
     left: 110px;
-    bottom: 256px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -92,18 +94,18 @@
 }
 
 .footer-contacts__map {
-  width: 320px;
+  width: 100%;
   height: 362px;
-  border: none;
   display: block;
+  border: 0;
 
   @media (min-width: @tablet) {
-    width: 768px;
+    width: 100%;
     height: 400px;
   }
 
   @media (min-width: @laptop) {
-    width: 1440px;
+    width: 100%;
     height: 400px;
   }
 }

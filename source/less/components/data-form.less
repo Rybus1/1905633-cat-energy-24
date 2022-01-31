@@ -13,7 +13,7 @@
 }
 
 .data-form__list {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .data-form__list2 {
@@ -25,7 +25,7 @@
   }
 
   @media (min-width: @laptop) {
-    margin-top: 0px;
+    margin-top: 0;
     width: 570px;
     margin-left: auto;
   }
@@ -36,24 +36,46 @@
   position: relative;
 }
 
+.underline-list {
+  position: relative;
+}
+
 .underline-list.data-form__list {
   @media (min-width: @laptop) {
     width: 569px;
   }
 }
 
-.underline-list .data-form__item:last-of-type::after {
-  content: "";
-  position: absolute;
-  width: 320px;
-  height: 1px;
-  background-color: @dark-grey;
-  top: 69px;
-  left: -20px;
+.data-form__list.underline-list {
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 40px);
+    height: 1px;
+    background-color: @dark-grey;
+    bottom: 0;
+    left: -20px;
 
     @media (min-width: @tablet) {
       display: none;
     }
+  }
+}
+
+.data-form__list2.underline-list {
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 40px);
+    height: 1px;
+    background-color: @dark-grey;
+    bottom: -25px;
+    left: -20px;
+
+    @media (min-width: @tablet) {
+      display: none;
+    }
+  }
 }
 
 .data-form__label {
@@ -88,6 +110,22 @@
     margin-bottom: 24px;
   }
 
+  &:hover {
+    border: 1px solid @border-grey;
+  }
+
+  &:focus {
+    border: 2px solid @special_dark-grey;
+  }
+
+  &:invalid {
+    border: 2px solid @invalid;
+  }
+
+  &:required {
+    border: 1px solid @border-grey2;
+  }
+
   @media (min-width: @tablet) {
     font-size: 20px;
     line-height: 30px;
@@ -109,13 +147,19 @@
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
-  margin-left: 45px;
+  margin-left: 30px;
   position: relative;
+  padding-left: 15px;
+  cursor: pointer;
+
+  &:hover::before {
+    border: 1px solid @input-hover;
+  }
 
   @media (min-width: @tablet) {
     font-size: 20px;
     line-height: 30px;
-    }
+  }
 
   &::before {
     content: "";
@@ -123,12 +167,19 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    left: -45px;
+    left: -30px;
     top: -6px;
     border: 1px solid @border-grey;
+
+    @media (min-width: @tablet) {
+      top: 0;
+    }
   }
 }
 
+.data-form__radio:disabled ~ .data-form__program-label {
+  opacity: 0.3;
+}
 
 .data-form__radio:checked ~ .data-form__program-label::after {
   content: "";
@@ -136,9 +187,13 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  left: -36px;
+  left: -21px;
   top: 3px;
   background-color: @green;
+
+  @media (min-width: @tablet) {
+    top: 9px;
+  }
 }
 
 .data-form__list2 .data-form__item {
@@ -146,24 +201,15 @@
 
   @media (min-width: @tablet) {
     padding-left: 28px;
+
     &:first-of-type {
       padding-top: 30px;
     }
 
     &:last-of-type {
       padding-bottom: 30px;
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
-  }
-
-  &:last-of-type::after {
-    content: "";
-    position: absolute;
-    width: 320px;
-    height: 1px;
-    background-color: @dark-grey;
-    top: 43px;
-    left: -20px;
   }
 }
 
@@ -178,6 +224,44 @@
   }
 }
 
+.block-wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: @green;
+    top: 15px;
+    right: -20px;
+
+    @media (min-width: @tablet) {
+      width: calc(100% + 140px);
+      right: -70px;
+      top: 19px;
+    }
+
+    @media (min-width: @laptop) {
+      width: calc(100% + 220px);
+      right: -110px;
+    }
+  }
+}
+
+.data-form__title {
+  position: relative;
+  z-index: 2;
+  background-color: @white;
+  padding-right: 22px;
+
+  @media (min-width: @tablet) {
+    width: fit-content;
+    padding-left: 39px;
+    padding-right: 42px;
+  }
+}
+
 .data-form__contacts-wrapper .data-form__title {
   margin-top: 51px;
   font-size: 24px;
@@ -185,49 +269,14 @@
   font-weight: 400;
   margin-bottom: 35px;
 
+  @media (max-width: @mobile-only) {
+    width: 187px;
+  }
+
   @media (min-width: @tablet) {
     font-size: 36px;
     line-height: 36px;
     font-weight: 400;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 99px;
-    height: 2px;
-    background-color: @green;
-    top: 15px;
-    right: -20px;
-
-    @media (min-width: @tablet) {
-      width: 145px;
-      right: -70px;
-    }
-
-    @media (min-width: @laptop) {
-      width: 778px;
-      right: -110px;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    background-color: @green;
-    top: 15px;
-    left: -70px;
-
-    @media (max-width: @mobile-only) {
-      display: none;
-    }
-
-    @media (min-width: @laptop) {
-      width: 70px;
-      left: -110px;
-    }
   }
 }
 
@@ -241,7 +290,9 @@
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 25px;
-  margin-left: 46px;
+  margin-left: 30px;
+  padding-left: 16px;
+  cursor: pointer;
 
   @media (min-width: @tablet) {
     font-size: 20px;
@@ -254,13 +305,22 @@
     width: 30px;
     height: 30px;
     border: 1px solid @border-grey;
-    left: 0px;
+    left: 0;
     top: -6px;
 
     @media (min-width: @tablet) {
-     top: 0px;
+      top: 0;
     }
   }
+
+
+  &:hover::before {
+    border: 1px solid @input-hover;
+  }
+}
+
+.data-form__checkbox-input:disabled ~ .data-form__checkbox-label {
+  opacity: 0.3;
 }
 
 .data-form__checkbox-input:checked ~ .data-form__checkbox-label::after {
@@ -275,7 +335,7 @@
 
   @media (min-width: @tablet) {
     top: 7px;
-   }
+  }
 }
 
 .data-form__comments-wrapper {
@@ -286,57 +346,22 @@
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
-  margin-top: 0px;
+  margin-top: 0;
+
+  @media (max-width: @mobile-only) {
+    width: fit-content;
+  }
 
   @media (min-width: @tablet) {
     font-size: 36px;
     line-height: 36px;
     font-weight: 400;
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 158px;
-    height: 2px;
-    background-color: @green;
-    top: 15px;
-    right: -20px;
-
-    @media (min-width: @tablet) {
-      width: 478px;
-      right: -70px;
-    }
-
-    @media (min-width: @laptop) {
-      width: 1108px;
-      right: -110px;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    background-color: @green;
-    top: 15px;
-    left: -70px;
-
-    @media (max-width: @mobile-only) {
-      display: none;
-    }
-
-    @media (min-width: @laptop) {
-      width: 70px;
-      left: -110px;
-    }
-  }
 }
 
 .data-form__comment-field {
   margin-top: 38px;
-  width: 250px;
+  width: calc(100% - 30px);
   height: 150px;
   resize: none;
   font-size: 16px;
@@ -352,7 +377,7 @@
   padding-bottom: 9px;
 
   @media (min-width: @tablet) {
-    width: 600px;
+    width: calc(100% - 30px);
     margin-top: 76px;
     font-size: 20px;
     line-height: 30px;
@@ -386,49 +411,14 @@
   font-weight: 400;
   margin-bottom: 34px;
 
+  @media (max-width: @mobile-only) {
+    width: fit-content;
+  }
+
   @media (min-width: @tablet) {
     font-size: 36px;
     line-height: 36px;
     font-weight: 400;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 136px;
-    height: 2px;
-    background-color: @green;
-    top: 15px;
-    right: -20px;
-
-    @media (min-width: @tablet) {
-      width: 446px;
-      right: -70px;
-    }
-
-    @media (min-width: @laptop) {
-      width: 1078px;
-      right: -110px;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    background-color: @green;
-    top: 15px;
-    left: -70px;
-
-    @media (max-width: @mobile-only) {
-      display: none;
-    }
-
-    @media (min-width: @laptop) {
-      width: 70px;
-      left: -110px;
-    }
   }
 }
 
@@ -446,9 +436,10 @@
   border: none;
   margin-top: 16px;
   margin-bottom: 21px;
+  width: 100%;
 
   @media (min-width: @tablet) {
-    margin-left: 0px;
+    margin-left: 0;
     width: 282px;
     height: 52px;
   }
@@ -464,7 +455,7 @@
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 32px;
 
   @media (min-width: @tablet) {

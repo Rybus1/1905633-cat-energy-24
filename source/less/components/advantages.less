@@ -1,15 +1,7 @@
 // Начните писать стили здесь
 .advantages {
   position: relative;
-  max-width: 320px;
-
-  @media (min-width: @tablet) {
-    max-width: @tablet;
-  }
-
-  @media (min-width: @laptop) {
-    max-width: @laptop;
-  }
+  width: 100%;
 }
 
 .advantages__wrapper {
@@ -45,10 +37,14 @@
 }
 
 .advantages__list {
+  margin-top: 0;
+
   @media (min-width: @tablet) {
     display: grid;
-    grid-template-columns: 384px 1fr;
+    grid-template-columns: 1fr 1fr;
     margin: 0;
+    margin-bottom: 104px;
+    gap: 0 0;
   }
 
   @media (min-width: @laptop) {
@@ -60,12 +56,21 @@
 
 .advantages__item {
   position: relative;
+  min-height: 60px;
+  display: flex;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 0;
+    height: auto;
+    min-height: 0;
+  }
 
   &:last-of-type {
     margin-bottom: 53px;
 
     @media (min-width: @tablet) {
-      margin-bottom: 104px;
+      margin-bottom: 0;
     }
   }
 }
@@ -75,14 +80,17 @@
   font-size: 14px;
   line-height: 18px;
   margin-left: 80px;
-  margin-bottom: 20px;
+  display: block;
+  align-self: center;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media (min-width: @tablet) {
     font-size: 16px;
     line-height: 24px;
     margin-left: 0;
     margin-top: 183px;
-    width: 245px;
+    width: 70%;
     z-index: 1;
     position: relative;
   }
@@ -104,7 +112,7 @@
     }
   }
 
-  &--bio::after {
+  &-bio::after {
     content: "";
     display: block;
     position: absolute;
@@ -123,7 +131,7 @@
     }
   }
 
-  &--powder::after {
+  &-powder::after {
     content: "";
     display: block;
     position: absolute;
@@ -142,7 +150,7 @@
     }
   }
 
-  &--meal::after {
+  &-meal::after {
     content: "";
     display: block;
     position: absolute;
@@ -161,7 +169,7 @@
     }
   }
 
-  &--time::after {
+  &-time::after {
     content: "";
     display: block;
     position: absolute;

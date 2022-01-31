@@ -1,19 +1,21 @@
 // Начните писать стили здесь
 .product-info {
   background-image: url("../img/index-background1.jpg");
-  background-size: 320px auto;
+  background-position-x: center;
+  background-size: 320px 302px;
   background-repeat: no-repeat;
   position: relative;
+  z-index: 1;
 
   &::before {
     content: "";
     display: block;
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 0;
-    width: 320px;
+    width: 100%;
     height: 302px;
-    z-index: 1;
+    z-index: 2;
     background-color: rgba(@green, 0.85);
 
     @media (min-width: @tablet) {
@@ -33,6 +35,35 @@
   @media (min-width: @tablet) {
     background-image: none;
     z-index: 3;
+  }
+}
+
+.product-info__outer-wrapper {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 67px;
+    width: 100%;
+    height: 302px;
+    z-index: 0;
+    // background: @cat-bg;
+    background: linear-gradient(90deg, @cat-bg 50%, @cat-bg-dark 50%);
+
+
+    @media (min-width: @tablet) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
   }
 }
 
@@ -60,6 +91,7 @@
 
   @media (min-width: @tablet) {
     margin-left: 87px;
+    margin-right: 87px;
   }
 
   @media (min-width: @laptop) {
@@ -86,7 +118,8 @@
       background-repeat: no-repeat;
       background-image: url("/img/index-can-tablet1.png");
       top: 232px;
-      left: -87px;
+      left: auto;
+      right: auto;
       z-index: -1;
     }
 
@@ -97,8 +130,9 @@
       background-repeat: no-repeat;
       background-image: url("/img/index-can-desktop1.png");
       top: 29px;
-      left: 448px;
+      left: auto;
       z-index: 5;
+      margin-left: 315px;
     }
   }
 }
@@ -112,19 +146,23 @@
   display: block;
   padding-top: 27px;
   margin-bottom: 25px;
+  width: 249px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: @tablet) {
-   color: @black;
-   font-size: 60px;
-   line-height: 60px;
-   font-weight: 400;
-   width: 414px;
-   text-align: start;
+    color: @black;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    width: 414px;
+    text-align: start;
+    margin-left: 0;
   }
 
   @media (min-width: @laptop) {
-   margin-left: 80px;
-   padding-top: 111px;
+    margin-left: 80px;
+    padding-top: 111px;
   }
 }
 
@@ -171,15 +209,13 @@
   padding-bottom: 7px;
   display: block;
   text-align: center;
-  width: 280px;
+  width: 100%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 20px;
   order: 2;
 
   @media (min-width: @tablet) {
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: 49px;
     width: 244px;
     height: 26px;
