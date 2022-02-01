@@ -194,6 +194,18 @@
   }
 }
 
+.advantages__description--time-mobile {
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+
+.advantages__description--time-tablet {
+  @media (max-width: @mobile-only) {
+    display: none;
+  }
+}
+
 .advantages__description-number {
   @media (max-width: @mobile-only) {
     position: absolute;
