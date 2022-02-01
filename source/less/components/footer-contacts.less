@@ -38,15 +38,15 @@
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
-  margin-top: 26px;
+  margin-top: 21px;
   margin-bottom: 26px;
 
   @media (min-width: @tablet) {
     font-size: 20px;
     line-height: 26px;
-    margin-top: 60px;
+    margin-top: 80px;
     margin-left: 40px;
-    margin-bottom: 56px;
+    margin-bottom: 61px;
     width: 172px;
   }
 
@@ -56,14 +56,14 @@
 }
 
 .footer-contacts__address-wrapper {
-  margin-top: 26px;
+  margin-top: 22px;
   margin-bottom: 26px;
 
   @media (min-width: @tablet) {
-    margin-top: 56px;
+    margin-top: 77px;
   }
 
-  @media (min-width: @tablet) {
+  @media (min-width: @laptop) {
     margin-right: 80px;
   }
 }
@@ -83,13 +83,19 @@
     margin-right: 40px;
   }
 
-  @media (min-width: @tablet) {
+  @media (min-width: @laptop) {
     text-align: start;
     font-size: 16px;
     line-height: 20px;
     width: 160px;
     margin-top: 0;
     margin-right: 40px;
+  }
+
+  &:last-of-type {
+    @media (min-width: @tablet) {
+      margin-top: 20px;
+    }
   }
 }
 

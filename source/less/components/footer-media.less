@@ -46,3 +46,51 @@
     padding-top: 0;
   }
 }
+
+.footer-media__HTML-academy-wrapper {
+  position: relative;
+  margin-top: 18px;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet) {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.footer-media__HTML-academy {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+
+  &:hover {
+    stroke: @green;
+    fill: @green;
+  }
+
+  &:active {
+    stroke: @green;
+    opacity: 0.3;
+  }
+}
+
+.footer-media__HTML-academy-label {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+  color: @special_dark-grey;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: @tablet) {
+    margin-right: 22px;
+  }
+}
+
+.footer-media__HTML-academy-logo {
+  width: 27px;
+  height: 34px;
+  margin-top: auto;
+  margin-bottom: auto;
+}

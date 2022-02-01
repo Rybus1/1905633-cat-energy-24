@@ -1,4 +1,3 @@
-// Начните писать стили здесь
 .advantages {
   position: relative;
   width: 100%;
@@ -28,10 +27,11 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 0;
+    margin-top: 46px;
   }
 
   @media (min-width: @laptop) {
-    margin-top: 71px;
+    margin-top: 40px;
   }
 }
 
@@ -40,15 +40,15 @@
 
   @media (min-width: @tablet) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 384px 1fr;
     margin: 0;
     margin-bottom: 104px;
-    gap: 0 0;
+    row-gap: 62px;
   }
 
   @media (min-width: @laptop) {
-    display: flex;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 280px 280px 280px 245px;
     justify-content: space-between;
   }
 }
@@ -89,9 +89,15 @@
     line-height: 24px;
     margin-left: 0;
     margin-top: 183px;
-    width: 70%;
+    width: 76%;
     z-index: 1;
     position: relative;
+  }
+
+  @media (min-width: @laptop) {
+    margin-top: 183px;
+    width: 100%;
+    align-self: auto;
   }
 
   &::before {
@@ -117,14 +123,14 @@
     position: absolute;
     left: 18px;
     top: 16px;
-    width: 60px;
-    height: 60px;
+    width: 32px;
+    height: 32px;
     background-image: url("../img/leaf-icon.svg");
     background-repeat: no-repeat;
 
     @media (min-width: @tablet) {
-      width: 80px;
-      height: 80px;
+      width: 32px;
+      height: 32px;
       top: -84px;
       left: 27px;
     }
@@ -136,16 +142,16 @@
     position: absolute;
     left: 15px;
     top: 16px;
-    width: 60px;
-    height: 60px;
+    width: 32px;
+    height: 32px;
     background-image: url("../img/powder-icon.svg");
     background-repeat: no-repeat;
 
     @media (min-width: @tablet) {
-      width: 80px;
-      height: 80px;
-      top: -84px;
-      left: 27px;
+      width: 32px;
+      height: 32px;
+      top: -87px;
+      left: 25px;
     }
   }
 
@@ -155,14 +161,14 @@
     position: absolute;
     left: 19px;
     top: 16px;
-    width: 60px;
-    height: 60px;
+    width: 32px;
+    height: 32px;
     background-image: url("../img/cuttlery-icon.svg");
     background-repeat: no-repeat;
 
     @media (min-width: @tablet) {
-      width: 80px;
-      height: 80px;
+      width: 32px;
+      height: 32px;
       top: -84px;
       left: 27px;
     }
@@ -174,14 +180,14 @@
     position: absolute;
     left: 18px;
     top: 16px;
-    width: 60px;
-    height: 60px;
+    width: 32px;
+    height: 32px;
     background-image: url("../img/clock-icon.svg");
     background-repeat: no-repeat;
 
     @media (min-width: @tablet) {
-      width: 80px;
-      height: 80px;
+      width: 32px;
+      height: 32px;
       top: -84px;
       left: 27px;
     }
@@ -206,7 +212,7 @@
     font-size: 280px;
     line-height: 280px;
     top: 32px;
-    left: 165px;
+    left: 119px;
     position: absolute;
     color: @grey;
   }
