@@ -224,6 +224,41 @@
   }
 }
 
+.data-form__icon {
+  fill: none;
+  position: absolute;
+
+  &--envelope {
+    top: 18px;
+    right: 17px;
+    width: 18px;
+    height: 14px;
+  }
+
+  &--phone {
+    width: 20px;
+    height: 20px;
+    top: 13px;
+    right: 13px;
+  }
+}
+
+.data-form__input--email:focus ~ .data-form__icon--envelope {
+  stroke: @green;
+}
+
+.data-form__input--email:invalid ~ .data-form__icon--envelope {
+  stroke: @invalid;
+}
+
+.data-form__input--phone:focus ~ .data-form__icon--phone {
+  stroke: @green;
+}
+
+.data-form__input--phone:invalid ~ .data-form__icon--phone {
+  stroke: @invalid;
+}
+
 .block-wrapper {
   position: relative;
 
@@ -238,7 +273,7 @@
 
     @media (min-width: @tablet) {
       width: calc(100% + 140px);
-      right: -70px;
+      right: -30px;
       top: 19px;
     }
 

@@ -1,9 +1,12 @@
 .social {
   display: flex;
   position: relative;
-  margin-left: 73px;
-  margin-right: 82px;
   justify-content: space-between;
+
+  @media (max-width: @mobile-only) {
+    border-top: 1px solid @dark-grey;
+    border-bottom: 1px solid @dark-grey;
+  }
 
   @media (min-width: @tablet) {
     margin-top: auto;
@@ -17,55 +20,49 @@
   height: 64px;
 }
 
-.vk-logo {
-  display: block;
-  background-image: url("/img/icons/vk-logo.svg");
-  background-repeat: no-repeat;
-  width: 23px;
-  height: 14px;
+.social__item--first {
+  @media (max-width: @mobile-only) {
+    padding-left: 50px;
+  }
+}
+
+.social__item--last {
+  @media (max-width: @mobile-only) {
+    padding-right: 50px;
+  }
+}
+
+.social__link {
   margin-top: auto;
   margin-bottom: auto;
-  background-position: center;
+}
 
-  @media (min-width: @tablet) {
+.social__logo {
+  fill: none;
+  align-self: center;
+
+  &:hover {
+    stroke: @green;
+  }
+
+  &:active {
+    stroke: @green;
+    opacity: 0.3;
+  }
+
+  &--vk {
     width: 29px;
     height: 17px;
-    background-size: 29px, 17px;
   }
-}
 
-.insta-logo {
-  display: block;
-  background-image: url("/img/icons/insta-logo.svg");
-  // background-image: url("/img/icons/sprite.svg#insta-logo");
-  background-repeat: no-repeat;
-  width: 17px;
-  height: 17px;
-  margin-top: auto;
-  margin-bottom: auto;
-  background-position: center;
-
-  @media (min-width: @tablet) {
+  &--insta {
     width: 23px;
     height: 23px;
-    background-size: 23px, 23px;
   }
-}
 
-.fb-logo {
-  display: block;
-  background-image: url("/img/icons/fb-logo.svg");
-  background-repeat: no-repeat;
-  width: 11px;
-  height: 19px;
-  margin-top: auto;
-  margin-bottom: auto;
-  background-position: center;
-
-  @media (min-width: @tablet) {
+  &--fb {
     width: 15px;
     height: 29px;
-    background-size: 15px, 29px;
   }
 }
 
@@ -77,29 +74,42 @@
   @media (min-width: @tablet) {
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 50px;
   }
 }
 
-.footer-media__HTML-academy-logo {
+.footer-media__HTML-academy {
+  display: flex;
+  justify-content: space-between;
   text-decoration: none;
+
+  &:hover {
+    stroke: @green;
+    fill: @green;
+  }
+
+  &:active {
+    stroke: @green;
+    opacity: 0.3;
+  }
+}
+
+.footer-media__HTML-academy-label {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
   color: @special_dark-grey;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
 
-  &::after {
-    content: "";
-    display: block;
-    background-image: url("/img/icons/html-academy-logo.svg");
-    width: 27px;
-    height: 34px;
-    position: absolute;
-    right: 0;
-    top: -5px;
-
-    @media (min-width: @tablet) {
-      right: -49px;
-    }
+  @media (min-width: @tablet) {
+    margin-right: 22px;
   }
+}
+
+.footer-media__HTML-academy-logo {
+  width: 27px;
+  height: 34px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
