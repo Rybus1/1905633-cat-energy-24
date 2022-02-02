@@ -1,0 +1,168 @@
+// Начните писать стили здесь
+.main-nav {
+  position: absolute;
+  left: 0;
+  top: 65px;
+  z-index: 3;
+
+  @media (max-width: @mobile-only) {
+    width: 100%;
+
+    &--closed {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    position: static;
+    margin-left: auto;
+  }
+}
+
+.main-nav--inline {
+  position: static;
+}
+
+.main-nav--index {
+  @media (min-width: @laptop) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 696px;
+      top: 0;
+      right: 0;
+      background-image: url("../img/index-background-desktop1.jpg");
+      background-color: @cat-bg;
+      background-repeat: no-repeat;
+      background-position-x: right;
+    }
+  }
+
+  @media (min-width: @laptop) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 696px;
+      top: 0;
+      right: 0;
+      background-color: rgba(@green, 0.85);
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.main-nav__list {
+  display: block;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    margin: 0;
+    width: 100%;
+  }
+
+  @media (min-width: @laptop) {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.main-nav__item {
+  background-color: @white;
+  position: relative;
+
+  @media (max-width: @mobile-only) {
+    border-top: 1px solid @navigation-splitter;
+  }
+
+  @media (min-width: @tablet) {
+    height: 24px;
+    margin-right: 37px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: @laptop) {
+    background-color: transparent;
+    height: 30px;
+    margin-right: 36px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.main-nav__item:last-of-type {
+  @media (max-width: @mobile-only) {
+    border-bottom: 1px solid @navigation-splitter;
+  }
+}
+
+.main-nav__link {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: @black;
+  text-transform: uppercase;
+  display: block;
+  height: 44px;
+  padding-top: 22px;
+  position: relative;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-top: 42px;
+    height: 34px;
+
+    &--active {
+      border-bottom: 2px solid @green;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: @laptop) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-top: 71px;
+    height: 34px;
+    padding-top: 0;
+  }
+}
+
+.main-nav-inline .main-nav__link {
+  &::before {
+    left: -20px;
+  }
+
+  &::after {
+    left: -20px;
+  }
+}
+
+.main-nav--index .main-nav__link {
+  @media (min-width: @laptop) {
+    color: @white;
+
+    &--active {
+      border-bottom: 2px solid @white;
+    }
+  }
+}

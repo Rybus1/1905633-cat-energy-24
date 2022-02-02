@@ -1,0 +1,35 @@
+.shop {
+  position: relative;
+}
+
+.shop__container {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet) {
+    width: 708px;
+  }
+
+  @media (min-width: @laptop) {
+    width: 1220px;
+    margin-top: 50px;
+  }
+}
+
+.shop__list {
+  position: relative;
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 60px;
+  }
+
+  @media (min-width: @laptop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0 80px;
+  }
+}

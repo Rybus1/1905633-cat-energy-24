@@ -1,0 +1,265 @@
+// Начните писать стили здесь
+.programs {
+  position: relative;
+  max-width: 100%;
+  margin-top: 20px;
+
+  @media (min-width: @tablet) {
+    margin-top: 0px;
+  }
+
+  @media (min-width: @laptop) {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 80px;
+  }
+}
+
+.programs__item {
+  background-color: @grey;
+  position: relative;
+  display: block;
+
+  @media (min-width: @tablet) {
+    padding-left: 52px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @laptop) {
+    padding-left: 52px;
+    width: 100%;
+  }
+
+  &--slim::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 29px;
+    top: 21px;
+    width: 36px;
+    height: 50px;
+    z-index: 1;
+    background-image: url("../img/cat_slim.svg");
+
+    @media (min-width: @tablet) {
+      width: 140px;
+      height: 194px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      left: auto;
+      right: 92px;
+      top: 80px;
+    }
+
+    @media (min-width: @laptop) {
+      width: 70px;
+      height: 97px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      left: 67px;
+      top: 41px;
+    }
+  }
+
+  &--mass::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 13px;
+    top: 35px;
+    width: 67px;
+    height: 28px;
+    z-index: 1;
+    background-image: url("../img/cat_fit.svg");
+
+    @media (min-width: @tablet) {
+      width: 268px;
+      height: 112px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      left: auto;
+      right: 28px;
+      top: 135px;
+    }
+
+    @media (min-width: @laptop) {
+      width: 134px;
+      height: 56px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      left: 33px;
+      top: 67px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 22px;
+    top: 24px;
+    width: 50px;
+    height: 50px;
+    z-index: 0;
+    background-color: @green;
+    border-radius: 50%;
+
+    @media (min-width: @tablet) {
+      width: 200px;
+      height: 200px;
+      left: auto;
+      right: 62px;
+      top: 91px;
+    }
+
+    @media (min-width: @laptop) {
+      width: 100px;
+      height: 100px;
+      left: 52px;
+      top: 47px;
+    }
+  }
+}
+
+.programs__title {
+  font-size: 24px;
+  line-height: 37px;
+  margin-left: 91px;
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0px;
+
+  @media (min-width: @tablet) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 76px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @laptop) {
+    margin-left: 162px;
+  }
+}
+
+.programs__description-wrapper {
+  position: relative;
+  margin-right: 20px;
+  margin-left: 20px;
+
+  @media (min-width: @tablet) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.programs__description {
+  font-family: "Arial", sans-serif;
+  margin-top: 29px;
+
+  @media (min-width: @tablet) {
+    margin-left: 0;
+    max-width: 52%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 25px;
+  }
+
+  @media (min-width: @laptop) {
+    display: block;
+    padding-right: 52px;
+    margin-top: 75px;
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -23px;
+    width: 100%;
+    height: 1px;
+    z-index: 0;
+    background-color: @dark-grey;
+    border-radius: 50%;
+
+    @media (min-width: @tablet) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+}
+
+.programs__link-wrapper {
+  position: relative;
+}
+
+.programs__link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 42px;
+  margin-left: 19px;
+  padding-bottom: 22px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet) {
+    margin-left: 0;
+    margin-top: 51px;
+    padding-bottom: 57px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0px;
+  }
+
+  @media (min-width: @laptop) {
+    margin-top: 27px;
+    padding-bottom: 59px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 121px;
+    bottom: 24px;
+    width: 24px;
+    height: 12px;
+    background-image: url("../img/arrow-icon.png");
+
+    @media (min-width: @tablet) {
+      left: 133px;
+      top: 9px;
+    }
+  }
+
+  &:hover::after {
+    width: 32px;
+    background-image: url("../img/arrow-icon-long.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active::after {
+    width: 32px;
+    background-image: url("../img/arrow-icon-long.svg");
+    opacity: 0.3;
+  }
+}

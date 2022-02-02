@@ -1,0 +1,59 @@
+.page {
+  height: auto;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page__body {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: @white;
+
+  @media (min-width: @tablet) {
+    min-width: @tablet;
+  }
+
+  @media (min-width: @laptop) {
+    min-width: @laptop;
+  }
+}
+
+.page__catalog-title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  padding-top: 27px;
+  padding-bottom: 41px;
+  padding-left: 20px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: @mobile-only) {
+    border-bottom: 1px solid @shop-grey;
+  }
+
+  @media (min-width: @tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    padding-bottom: 22px;
+    padding-left: 30px;
+    width: 738px;
+  }
+
+  @media (min-width: @laptop) {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    padding-bottom: 2px;
+    padding-left: 110px;
+    width: 1330px;
+  }
+}
