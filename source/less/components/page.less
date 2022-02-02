@@ -13,7 +13,7 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  background-color: @white; /* ЭТО ВРЕМЕННАЯ КОНТРАСТНАЯ ПОДКЛАДКА*/
+  background-color: @white;
 
   @media (min-width: @tablet) {
     min-width: @tablet;
@@ -24,27 +24,16 @@
   }
 }
 
-.page__catalog-wrapper {
-  width: 280px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: @tablet) {
-    width: 708px;
-  }
-
-  @media (min-width: @laptop) {
-    width: 1220px;
-    margin-top: 50px;
-  }
-}
-
 .page__catalog-title {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   padding-top: 27px;
   padding-bottom: 41px;
+  padding-left: 20px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (max-width: @mobile-only) {
     border-bottom: 1px solid @shop-grey;
@@ -55,6 +44,8 @@
     line-height: 60px;
     font-weight: 400;
     padding-bottom: 22px;
+    padding-left: 30px;
+    width: 738px;
   }
 
   @media (min-width: @laptop) {
@@ -62,20 +53,7 @@
     line-height: 60px;
     font-weight: 400;
     padding-bottom: 2px;
-  }
-}
-
-.page__form-wrapper {
-  width: 280px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: @tablet) {
-    width: 708px;
-  }
-
-  @media (min-width: @laptop) {
-    width: 1220px;
-    margin-top: 50px;
+    padding-left: 110px;
+    width: 1330px;
   }
 }

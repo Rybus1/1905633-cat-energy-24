@@ -2,29 +2,26 @@
 .additions {
   position: relative;
 
+  &--green-line {
+    border-top: 2px solid @green;
+  }
+
   @media (min-width: @tablet) {
     margin-top: 68px;
   }
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: calc(100% + 20px);
-    height: 2px;
-    background-color: @green;
-    top: 15px;
-    left: 0;
+.additions__container {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 
-    @media (min-width: @tablet) {
-      width: calc(100% + 60px);
-      right: -30px;
-      left: -30px;
-    }
+  @media (min-width: @tablet) {
+    width: 708px;
+  }
 
-    @media (min-width: @laptop) {
-      width: calc(100% + 220px);
-      left: -110px;
-    }
+  @media (min-width: @laptop) {
+    width: 1220px;
   }
 }
 
@@ -47,20 +44,26 @@
   display: block;
   width: fit-content;
   padding-right: 22px;
+  padding-left: 20px;
+  margin-top: -16px;
+  left: -20px;
 
   @media (min-width: @tablet) {
     font-size: 36px;
     line-height: 36px;
     font-weight: 400;
-    margin-left: 37px;
+    margin-left: 30px;
     padding-left: 32px;
     padding-right: 36px;
+    margin-top: -20px;
+    left: -30px;
   }
 
   @media (min-width: @laptop) {
     padding-left: 40px;
     padding-right: 35px;
-    margin-left: 0;
+    margin-left: 70px;
+    left: -110px;
   }
 }
 

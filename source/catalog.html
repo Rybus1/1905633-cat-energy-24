@@ -6,7 +6,9 @@
   <title>Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <!--<link rel="icon" href="favicon.ico">-->
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/Favicon/fav32.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -36,10 +38,10 @@
 
 
     <main class="page__main">
-      <div class="page__catalog-wrapper">
         <h1 class="page__catalog-title">Каталог продукции</h1>
         <section class="shop">
           <h2 class="visually-hidden">Перечень основных товаров</h2>
+          <div class="shop__container">
           <ul class="shop__list">
             <li class="shop__card card">
               <div class="card__wrapper">
@@ -95,7 +97,7 @@
                     <source type="image/webp" srcset="/img/catalog-mobile2.webp 1x, /img/catalog-mobile2@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="/img/catalog-laptop2.png 1x, /img/catalog-laptop2@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="/img/catalog-tablet2.png 1x, /img/catalog-tablet2@2x.png 2x">
-                    <img class="card__photo card__photo-small" src="/img/catalog-mobile2.png" srcset="/img/catalog-mobile2@2x.png"
+                    <img class="card__photo card__photo-big" src="/img/catalog-mobile2.png" srcset="/img/catalog-mobile2@2x.png"
                       alt="изображение товара">
                   </picture>
                 </a>
@@ -185,7 +187,7 @@
                     <source type="image/webp" srcset="/img/catalog-mobile4.webp 1x, /img/catalog-mobile4@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="/img/catalog-laptop4.png 1x, /img/catalog-laptop4@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="/img/catalog-tablet4.png 1x, /img/catalog-tablet4@2x.png 2x">
-                    <img class="card__photo card__photo-small" src="/img/catalog-mobile4.png" srcset="/img/catalog-mobile4@2x.png"
+                    <img class="card__photo card__photo-big" src="/img/catalog-mobile4.png" srcset="/img/catalog-mobile4@2x.png"
                       alt="изображение товара">
                   </picture>
                 </a>
@@ -275,7 +277,7 @@
                     <source type="image/webp" srcset="/img/catalog-mobile6.webp 1x, /img/catalog-mobile6@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="/img/catalog-laptop6.png 1x, /img/catalog-laptop6@2x.png 2x">
                     <source media="(min-width: 768px)" srcset="/img/catalog-tablet6.png 1x, /img/catalog-tablet6@2x.png 2x">
-                    <img class="card__photo card__photo-small" src="/img/catalog-mobile6.png" srcset="/img/catalog-mobile6@2x.png"
+                    <img class="card__photo card__photo-big" src="/img/catalog-mobile6.png" srcset="/img/catalog-mobile6@2x.png"
                       alt="изображение товара">
                   </picture>
                 </a>
@@ -365,9 +367,11 @@
               </div>
             </li>
           </ul>
+        </div>
         </section>
-        <section class="additions">
-          <h2 class="additions__title">Дополнительные товары</h2>
+        <section class="additions additions--green-line">
+          <div class="additions__container">
+            <h2 class="additions__title">Дополнительные товары</h2>
           <div class="additions__wrapper">
             <ul class="additions__list">
               <li class="additions__item">
@@ -407,12 +411,12 @@
               <p class="additions__promo">Закажите все<br> и получите чехол для<br> кота в подарок!</p>
             </div>
           </div>
+        </div>
         </section>
-      </div>
     </main>
 
     <footer class="page__footer">
-      <section class="footer-contacts">
+      <section class="footer-contacts footer-contacts--white-background">
         <div class="footer-contacts__wrapper">
           <h2 class="visually-hidden">Контакты</h2>
           <p class="footer-contacts__invitation">приглашаем <br> к сотрудничеству дилеров!</p>
