@@ -26,22 +26,38 @@
   }
 }
 
+.data-form__bio-and-program-wrapper .data-form__list:last-of-type {
+  margin-top: 28px;
+}
+
+.data-form__bio-and-program-wrapper .data-form__list:last-of-type .data-form__item {
+  margin-bottom: 25px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet) {
+    padding-left: 28px;
+
+    &:first-of-type {
+      padding-top: 30px;
+    }
+
+    &:last-of-type {
+      padding-bottom: 30px;
+      margin-bottom: 0;
+    }
+  }
+}
+
 .data-form__list {
   margin-bottom: 0;
 }
 
-.data-form__list2 {
-  margin-top: 28px;
-  margin-bottom: 0;
-
+.data-form__list:last-of-type {
   @media (min-width: @tablet) {
     border: 1px solid @border-grey2;
-  }
-
-  @media (min-width: @laptop) {
-    margin-top: 0;
-    width: 570px;
-    margin-left: auto;
   }
 }
 
@@ -50,17 +66,13 @@
   position: relative;
 }
 
-.underline-list {
+.data-form__list--underlined {
   position: relative;
-}
 
-.underline-list.data-form__list {
   @media (min-width: @laptop) {
     width: 569px;
   }
-}
 
-.data-form__list.underline-list {
   &::after {
     content: "";
     position: absolute;
@@ -76,7 +88,7 @@
   }
 }
 
-.data-form__list2.underline-list {
+.data-form__list:last-of-type.data-form__list--underlined {
   &::after {
     content: "";
     position: absolute;
@@ -113,16 +125,12 @@
   width: 100%;
   height: 45px;
   margin-bottom: 14px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
   padding-left: 15px;
   border: 1px solid @border-grey2;
-
-  &:last-of-type {
-    margin-bottom: 24px;
-  }
 
   &:hover {
     border: 1px solid @border-grey;
@@ -145,10 +153,6 @@
     line-height: 30px;
     padding-left: 19px;
   }
-}
-
-.data-form__input.contacts-input {
-  margin-bottom: 14px;
 }
 
 .data-form__radio {
@@ -210,27 +214,6 @@
   }
 }
 
-.data-form__list2 .data-form__item {
-  margin-bottom: 25px;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: @tablet) {
-    padding-left: 28px;
-
-    &:first-of-type {
-      padding-top: 30px;
-    }
-
-    &:last-of-type {
-      padding-bottom: 30px;
-      margin-bottom: 0;
-    }
-  }
-}
-
 .data-form__contacts-wrapper {
   position: relative;
 
@@ -263,6 +246,10 @@
     top: 13px;
     right: 13px;
   }
+}
+
+.data-form__input--email {
+  margin-bottom: 14px;
 }
 
 .data-form__input--email:focus ~ .data-form__icon--envelope {
@@ -421,7 +408,7 @@
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: @special_dark-grey;
   border: 1px solid @border-grey2;
@@ -495,7 +482,7 @@
 }
 
 .data-form__button {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   border: none;
   margin-top: 16px;
   margin-bottom: 21px;

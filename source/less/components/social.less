@@ -22,7 +22,7 @@
 
 .social__item--first {
   @media (max-width: @mobile-only) {
-    padding-left: 50px;
+    padding-left: 73px;
   }
 
   @media (min-width: @tablet) {
@@ -32,7 +32,7 @@
 
 .social__item--last {
   @media (max-width: @mobile-only) {
-    padding-right: 50px;
+    padding-right: 82px;
   }
 
   @media (min-width: @tablet) {
@@ -45,9 +45,54 @@
   margin-bottom: auto;
 }
 
-.social__logo {
+.social__logo--vk {
+  stroke: none;
+  fill: @social;
+  width: 22px;
+  height: 12px;
+
+  &:hover {
+    fill: @green;
+  }
+
+  &:active {
+    fill: @green;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet) {
+    width: 29px;
+    height: 17px;
+  }
+}
+
+.social__logo--insta {
+  stroke: none;
+  fill: @social;
+  width: 16px;
+  height: 16px;
+
+  &:hover {
+    fill: @green;
+  }
+
+  &:active {
+    fill: @green;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social__logo--fb {
   fill: none;
-  align-self: center;
+  stroke: @social;
+  width: 10px;
+  height: 18px;
+  stroke-width: 1.5;
 
   &:hover {
     stroke: @green;
@@ -58,18 +103,9 @@
     opacity: 0.3;
   }
 
-  &--vk {
-    width: 29px;
-    height: 17px;
-  }
-
-  &--insta {
-    width: 23px;
-    height: 23px;
-  }
-
-  &--fb {
-    width: 15px;
-    height: 29px;
+  @media (min-width: @tablet) {
+    width: 13px;
+    height: 27px;
+    stroke-width: 1.1;
   }
 }
