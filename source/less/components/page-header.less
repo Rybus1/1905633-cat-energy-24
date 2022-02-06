@@ -4,19 +4,19 @@
   height: auto;
   flex-wrap: wrap;
   z-index: 2;
+}
 
-  &__white-background::after {
-    content: "";
-    position: absolute;
-    width: 320px;
-    height: 1px;
-    background-color: @dark-grey;
-    top: 66px;
-    left: 0;
+.page-header__white-background::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 1px;
+  background-color: @dark-grey;
+  top: 66px;
+  left: 0;
 
-    @media (min-width: @tablet) {
-      content: none;
-    }
+  @media (min-width: @tablet) {
+    content: none;
   }
 }
 

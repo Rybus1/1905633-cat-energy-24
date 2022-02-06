@@ -7,7 +7,11 @@
   }
 
   @media (min-width: @tablet) {
-    margin-top: 68px;
+    margin-top: 90px;
+  }
+
+  @media (min-width: @laptop) {
+    margin-top: 104px;
   }
 }
 
@@ -30,6 +34,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 325px;
+    margin-bottom: 82px;
   }
 }
 
@@ -37,7 +42,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
   position: relative;
   z-index: 2;
   background-color: @white;
@@ -53,10 +58,11 @@
     line-height: 36px;
     font-weight: 400;
     margin-left: 30px;
-    padding-left: 32px;
+    padding-left: 37px;
     padding-right: 36px;
-    margin-top: -20px;
+    margin-top: -24px;
     left: -30px;
+    margin-bottom: 80px;
   }
 
   @media (min-width: @laptop) {
@@ -68,29 +74,38 @@
 }
 
 .additions__list {
-  margin-top: 49px;
-  margin-bottom: 54px;
+  margin-top: 0px;
+  margin-bottom: 35px;
+  border-top: 1px solid @border-grey;
+  border-bottom: 1px solid @border-grey;
 
   @media (min-width: @tablet) {
     border: 1px solid @border-grey;
+    margin-bottom: 71px;
   }
 
   @media (min-width: @laptop) {
     border: none;
     width: 100%;
     margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 .additions__item {
   position: relative;
-  margin-top: 31px;
+  margin-top: 10px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet) {
     margin-left: 35px;
     margin-right: 35px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 25px;
+    padding-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   @media (min-width: @laptop) {
@@ -123,12 +138,21 @@
 
     @media (min-width: @tablet) {
       width: calc(100% + 76px);
-      top: 113px;
+      bottom: 0px;
       left: -38px;
+      top: auto;
     }
 
     @media (min-width: @laptop) {
       content: none;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 0;
     }
   }
 
@@ -240,7 +264,7 @@
   justify-content: center;
 
   @media (min-width: @tablet) {
-    margin-bottom: 76px;
+    margin-bottom: 67px;
   }
 
   @media (min-width: @laptop) {
@@ -307,7 +331,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-top: 59px;
+  padding-top: 43px;
   padding-bottom: 43px;
   z-index: 1;
   position: relative;
@@ -348,15 +372,15 @@
       position: absolute;
       width: 80px;
       height: 83px;
-      left: -349px;
-      top: -17px;
-      background-size: 93px 100px;
+      left: -347px;
+      top: -15px;
+      background-size: 80px 83px;
     }
 
     @media (min-width: @laptop) {
-      left: 34px;
-      top: -143px;
-      background-size: 93px 100px;
+      left: 43px;
+      top: -129px;
+      background-size: 80px 83px;
     }
   }
 }

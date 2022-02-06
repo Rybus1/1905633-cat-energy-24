@@ -2,8 +2,12 @@
 .card {
   position: relative;
   width: 100%;
-  margin-bottom: 19px;
   padding-bottom: 25px;
+  margin-top: 4px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 
   @media (min-width: @tablet) {
     background-color: @grey;
@@ -11,6 +15,7 @@
     background-repeat: no-repeat;
     margin-bottom: 0;
     padding-bottom: 0;
+    margin-top: 0;
   }
 
   @media (min-width: @laptop) {
@@ -43,7 +48,6 @@
 .card__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 19px;
   align-items: center;
   justify-items: center;
   position: relative;
@@ -57,10 +61,15 @@
 }
 
 .card.card--last {
-  display: inline;
+  padding-bottom: 65px;
+
+  &::after {
+    bottom: 40px;
+  }
 
   @media (min-width: @tablet) {
     background-color: @white;
+    padding-bottom: 0;
   }
 }
 
@@ -108,7 +117,9 @@
   color: inherit;
 }
 
-.card__link.photo-link {
+.card__link--photo {
+  margin-top: 5px;
+
   @media (min-width: @tablet) {
     margin-top: auto;
   }
@@ -119,6 +130,10 @@
 
   @media (min-width: @tablet) {
     width: 76.54%;
+  }
+
+  @media (min-width: @laptop) {
+    width: 68.54%;
   }
 }
 
@@ -226,8 +241,8 @@
   }
 
   @media (min-width: @laptop) {
-    width: 76.54%;
-    margin-bottom: 40px;
+    width: 68.54%;
+    margin-bottom: 35px;
   }
 }
 
@@ -239,6 +254,7 @@
     z-index: 2;
     margin-top: 141px;
     border: 2px solid @border-grey2;
+    padding-bottom: 36px;
   }
 
   @media (min-width: @laptop) {
@@ -253,7 +269,7 @@
     width: 30px;
     height: 2px;
     background-color: @plus-grey;
-    bottom: 135px;
+    top: -39px;
     left: calc(50% - 15px);
 
     @media (min-width: @tablet) {
@@ -274,7 +290,7 @@
     width: 2px;
     height: 30px;
     background-color: @plus-grey;
-    bottom: 120px;
+    top: -53px;
     left: 50%;
 
     @media (min-width: @tablet) {
@@ -307,7 +323,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 177px;
+    margin-top: 160px;
     margin-bottom: 23px;
   }
 }
@@ -319,6 +335,7 @@
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
+  margin-bottom: 21px;
 
   @media (min-width: @tablet) {
     font-size: 16px;
@@ -344,7 +361,6 @@
   background-color: @grey;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom: 50px;
 
   &:hover {
     background-color: @shop-grey;
@@ -359,5 +375,9 @@
     margin-left: auto;
     margin-right: auto;
     width: 76.54%;
+  }
+
+  @media (min-width: @laptop) {
+    width: 68.54%;
   }
 }

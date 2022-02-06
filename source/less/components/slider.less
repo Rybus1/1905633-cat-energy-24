@@ -60,7 +60,7 @@
   }
 }
 
-.slider__button {
+.slider__field {
   margin-left: 13px;
   margin-right: 13px;
   width: 85px;
@@ -70,6 +70,7 @@
   border-radius: 6px;
   position: relative;
   cursor: pointer;
+  background-color: @white;
 
   @media (min-width: @tablet) {
     margin-left: 23px;
@@ -80,56 +81,49 @@
     border: none;
     margin-top: 10px;
   }
+}
 
-  &::before {
-    @media (min-width: @tablet) {
-      content: "";
-      position: absolute;
-      width: 34px;
-      border: 1px solid @slider-grey;
-      height: 34px;
-      background-color: @white;
-      top: -14px;
-      left: 196px;
-      border-radius: 50%;
-      box-shadow: 0 6px 5px 0 @dark-grey;
-      cursor: pointer;
+.slider__ring {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 6px;
+  background-color: @green;
+  top: 4px;
+  left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
 
-      &:active {
-        border: 1px solid @green;
-      }
-    }
+  @media (min-width: @tablet) {
+    content: "";
+    position: absolute;
+    width: 34px;
+    border: 1px solid @slider-grey;
+    height: 34px;
+    background-color: @white;
+    top: -14px;
+    left: 196px;
+    border-radius: 50%;
+    box-shadow: 0 6px 5px 0 @dark-grey;
+    cursor: pointer;
 
-    @media (max-width: @mobile-only) {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      border: 0;
-      padding: 0;
-      white-space: nowrap;
-      clip-path: inset(100%);
-      clip: rect(0 0 0 0);
-      overflow: hidden;
+    &:active {
+      border: 1px solid @green;
     }
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    width: 36px;
-    height: 6px;
-    background-color: @green;
-    top: 3px;
-    left: 6px;
-    border-radius: 6px;
-    cursor: pointer;
-
     @media (min-width: @tablet) {
+      content: "";
+      position: absolute;
+      background-color: @green;
+      border-radius: 6px;
+      cursor: pointer;
       width: 8px;
       height: 8px;
-      left: 210px;
-      top: 0;
+      left: 12px;
+      top: 12px;
     }
   }
 }
