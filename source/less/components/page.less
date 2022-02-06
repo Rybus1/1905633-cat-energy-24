@@ -1,6 +1,6 @@
 .page {
   height: auto;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -24,16 +24,73 @@
   }
 }
 
+.page__wrapper {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet) {
+    width: 708px;
+  }
+
+  @media (min-width: @laptop) {
+    width: 1220px;
+  }
+}
+
+.page__outer-wrapper {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 302px;
+    z-index: 0;
+    background: linear-gradient(90deg, @cat-bg 50%, @cat-bg-dark 50%);
+
+
+    @media (min-width: @tablet) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+}
+
+
+.page__container {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet) {
+    width: 708px;
+  }
+
+  @media (min-width: @laptop) {
+    width: 1220px;
+  }
+}
+
 .page__catalog-title {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  padding-top: 27px;
-  padding-bottom: 41px;
-  padding-left: 20px;
   width: 280px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 28px;
+  margin-bottom: 0;
+  padding-bottom: 41px;
 
   @media (max-width: @mobile-only) {
     border-bottom: 1px solid @shop-grey;
@@ -43,9 +100,10 @@
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
-    padding-bottom: 22px;
+    padding-bottom: 19px;
     padding-left: 30px;
     width: 738px;
+    margin-top: 42px;
   }
 
   @media (min-width: @laptop) {
@@ -55,5 +113,6 @@
     padding-bottom: 2px;
     padding-left: 110px;
     width: 1330px;
+    margin-top: 76px;
   }
 }
