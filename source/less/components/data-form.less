@@ -186,10 +186,6 @@
   outline: 2px solid @invalid;
 }
 
-.data-form__radio {
-  display: none;
-}
-
 .data-form__program-label {
   color: @special_dark-grey-2;
   font-size: 16px;
@@ -227,6 +223,11 @@
       left: -46px;
     }
   }
+}
+
+.data-form__radio:focus ~ .data-form__program-label::before {
+  border: 1px solid @green;
+  outline: 1px solid @green;
 }
 
 .data-form__radio:disabled ~ .data-form__program-label {
@@ -379,10 +380,6 @@
   }
 }
 
-.data-form__checkbox-input {
-  display: none;
-}
-
 .data-form__checkbox-label {
   font-size: 16px;
   line-height: 18px;
@@ -419,6 +416,11 @@
   &:hover::before {
     border: 1px solid @input-hover;
   }
+}
+
+.data-form__checkbox-input:focus ~ .data-form__checkbox-label::before {
+  border: 1px solid @green;
+  outline: 1px solid @green;
 }
 
 .data-form__checkbox-input:disabled ~ .data-form__checkbox-label {

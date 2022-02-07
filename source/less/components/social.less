@@ -2,6 +2,7 @@
   display: flex;
   position: relative;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @media (max-width: @mobile-only) {
     border-top: 1px solid @dark-grey;
@@ -20,23 +21,28 @@
   height: 64px;
 }
 
-.social__item--first {
+.social__item:nth-of-type(3n+1){
   @media (max-width: @mobile-only) {
     padding-left: 73px;
   }
 
   @media (min-width: @tablet) {
-    padding-left: 22px;
+    padding-left: 5px;
   }
 }
 
-.social__item--last {
+.social__item:nth-of-type(3n+2) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social__item:nth-of-type(3n) {
   @media (max-width: @mobile-only) {
     padding-right: 82px;
   }
 
   @media (min-width: @tablet) {
-    padding-right: 5px;
+    padding-right: 22px;
   }
 }
 
