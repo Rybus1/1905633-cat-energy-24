@@ -68,15 +68,15 @@
             </ul>
             <ul class="data-form__list data-form__list--underlined">
               <li class="data-form__item">
-                <input class="data-form__radio" type="radio" name="weight-change" id="loss" value="loss" checked>
+                <input class="data-form__radio visually-hidden" type="radio" name="weight-change" id="loss" value="loss" checked>
                 <label class="data-form__program-label" for="loss">Похудение</label>
               </li>
               <li class="data-form__item">
-                <input class="data-form__radio" type="radio" name="weight-change" id="gain" value="gain">
+                <input class="data-form__radio visually-hidden" type="radio" name="weight-change" id="gain" value="gain">
                 <label class="data-form__program-label" for="gain">Набор массы</label>
               </li>
               <li class="data-form__item">
-                <input class="data-form__radio" type="radio" name="weight-change" id="unknown" value="unknown">
+                <input class="data-form__radio visually-hidden" type="radio" name="weight-change" id="unknown" value="unknown">
                 <label class="data-form__program-label" for="unknown">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
@@ -119,19 +119,19 @@
             <h3 class="data-form__title">Дополнительно</h3>
             <ul class="data-form__list">
               <li class="data-form__item">
-                <input class="data-form__checkbox-input" type="checkbox" name="extras" value="sugar" id="sugar" checked>
+                <input class="data-form__checkbox-input visually-hidden" type="checkbox" name="extras" value="sugar" id="sugar" checked>
                 <label class="data-form__checkbox-label" for="sugar">сахарозаменитель</label>
               </li>
               <li class="data-form__item">
-                <input class="data-form__checkbox-input" type="checkbox" name="extras" value="water" id="water">
+                <input class="data-form__checkbox-input visually-hidden" type="checkbox" name="extras" value="water" id="water">
                 <label class="data-form__checkbox-label" for="water">питьевая вода</label>
               </li>
               <li class="data-form__item">
-                <input class="data-form__checkbox-input" type="checkbox" name="extras" value="milk" id="milk">
+                <input class="data-form__checkbox-input visually-hidden" type="checkbox" name="extras" value="milk" id="milk">
                 <label class="data-form__checkbox-label" for="milk">молоко</label>
               </li>
               <li class="data-form__item">
-                <input class="data-form__checkbox-input" type="checkbox" name="extras" value="vitamin" id="vitamin">
+                <input class="data-form__checkbox-input visually-hidden" type="checkbox" name="extras" value="vitamin" id="vitamin">
                 <label class="data-form__checkbox-label" for="vitamin">витамины</label>
               </li>
             </ul>
@@ -171,7 +171,7 @@
             height="24">
         </a>
         <ul class="social">
-          <li class="social__item social__item--first">
+          <li class="social__item">
             <a class="social__link" aria-label="Ссылка - Вконтакте" href="https://vk.com">
               <svg class="social__logo social__logo--vk" width="22" height="12">
                 <use xlink:href="img/icons/sprite.svg#vk-logo-big"></use>
@@ -185,13 +185,14 @@
               </svg>
             </a>
           </li>
-          <li class="social__item social__item--last">
+          <li class="social__item">
             <a class="social__link" aria-label="Ссылка - Facebook" href="https://facebook.com">
               <svg class="social__logo social__logo--fb" width="10" height="18">
                 <use xlink:href="img/icons/sprite.svg#fb-logo-big"></use>
               </svg>
             </a>
           </li>
+
         </ul>
         <div class="footer-media__HTML-academy-wrapper">
           <a class="footer-media__HTML-academy" aria-label="Ссылка - HTML Academy"

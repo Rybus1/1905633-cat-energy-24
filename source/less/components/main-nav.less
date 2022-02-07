@@ -62,17 +62,21 @@
     display: flex;
     margin: 0;
     width: 100%;
+    flex-wrap: wrap;
+    max-width: 504px;
   }
 
   @media (min-width: @laptop) {
     position: relative;
     z-index: 1;
+    max-width: 580px;
   }
 }
 
 .main-nav__item {
   background-color: @white;
   position: relative;
+  padding-top: 22px;
 
   @media (max-width: @mobile-only) {
     border-top: 1px solid @navigation-splitter;
@@ -81,6 +85,7 @@
   @media (min-width: @tablet) {
     height: 24px;
     margin-right: 37px;
+    padding-top: 42px;
 
     &:last-of-type {
       margin-right: 0;
@@ -91,6 +96,7 @@
     background-color: transparent;
     height: 30px;
     margin-right: 36px;
+    padding-top: 71px;
 
     &:last-of-type {
       margin-right: 0;
@@ -114,14 +120,12 @@
   text-transform: uppercase;
   display: block;
   height: 44px;
-  padding-top: 22px;
   position: relative;
 
   @media (min-width: @tablet) {
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
-    padding-top: 42px;
     height: 34px;
 
     &--active {
@@ -141,7 +145,6 @@
     font-size: 20px;
     line-height: 30px;
     font-weight: 400;
-    margin-top: 71px;
     height: 34px;
     padding-top: 0;
   }
